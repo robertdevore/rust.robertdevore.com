@@ -11,3 +11,6 @@ This is an independent Node-generated static website plus a Rust learning worksp
 - Howl's manifest references actual tested source; regenerate and verify source/artifact hashes after changes. It renders text and does not type-check it.
 - Never invent author credentials, dates, ranking/citation outcomes, or unstable Rust guarantees. Preserve historical SEO baselines; future audits use a new dated directory.
 - Deploy with the documented Wrangler workflow only within the user's authorized scope. Never modify adjacent repositories or unrelated Cloudflare settings.
+
+- Write lesson and site prose in plain, direct English using the Orwell writing skill. Preserve technical meaning, code, diagnostic snapshots, and safety qualifications. Keep existing section URLs with lesson headingIds when renaming headings.
+- Homepage OG/X image is assets/rust-course-launch.png (1536×1024), the approved generated launch artwork without a byline. Other pages retain the Howl social card; scripts/social.mjs must not overwrite the launch artwork.

@@ -1,24 +1,24 @@
-{"title":"Tokio tasks, blocking, and cancellation","stage":3,"minutes":70,"summary":"Use a runtime with bounded queues, explicit task results, and deliberate shutdown.","example":"20_async"}
+{"title":"Tokio tasks, blocking, and cancellation","stage":3,"minutes":70,"summary":"Run Tokio tasks, limit queued work, and handle blocking calls and cancellation.","example":"20_async","headingIds":{"What Tokio provides":"five-layers-five-responsibilities","Limit queued work":"bound-the-work-that-can-accumulate","Check what cancellation leaves behind":"cancellation-needs-an-operation-specific-contract"}}
 ---
-## Five layers, five responsibilities
+## What Tokio provides
 
-Rust supplies async syntax. `Future` defines polling. An executor schedules tasks. Tokio supplies an executor plus timers, channels, and I/O integration. Your application defines limits, retries, state ownership, and shutdown. Learning Tokio is useful, but Tokio is not the language's definition of async.
+Rust supplies async syntax. `Future` defines polling. An executor schedules tasks. Tokio supplies an executor plus timers, channels, and I/O integration. Your application defines limits, retries, state ownership, and shutdown. Tokio is one runtime for Rust async code; it does not define the language feature.
 
 {{example}}
 
-The macro builds a current-thread Tokio runtime. A producer task sends four values into a bounded channel. The consumer drains it, and the producer's sender is dropped at completion. The join handle returns a task result containing the producer's own result; `await??` checks both failure layers.
+The macro builds a current-thread Tokio runtime. A producer task sends four values into a bounded channel. The consumer drains it, and the producer's sender is dropped at completion. The join handle reports whether the task failed and contains the producer's own result. In `await??`, the first `?` checks the task result; the second checks the producer's result.
 
-## Bound the work that can accumulate
+## Limit queued work
 
 A channel with capacity two creates backpressure: a send can wait for space. This bounds queued messages, not the size of each message or the total number of tasks elsewhere in the program. A production design must bound those separately.
 
 Tokio schedules cooperatively. A long computation or blocking filesystem call inside a task can occupy the runtime thread and prevent other tasks from progressing. Async syntax alone does not make a function nonblocking. Use an appropriate async API, a dedicated worker, or `spawn_blocking` with a deliberate concurrency limit. A started blocking task generally cannot be aborted just by aborting its async handle.
 
-## Cancellation needs an operation-specific contract
+## Check what cancellation leaves behind
 
 Selecting between two futures drops a losing future in common patterns. Ask what progress it may have made and whether retrying loses or duplicates work. Tokio's `mpsc::Receiver::recv` has documented cancellation behavior useful in select loops. Other operations, such as reading an exact number of bytes, may have consumed partial input before cancellation.
 
-A timeout is not rollback. Dropping a `JoinHandle` detaches the task; call `abort` when appropriate and await the handle to observe completion. Abortion takes effect when the task yields control, and destructors are part of cleanup. If cleanup needs asynchronous work, implement an explicit shutdown protocol rather than assuming ordinary `Drop` can await.
+A timeout is not rollback. Dropping a `JoinHandle` detaches the task; call `abort` when appropriate and await the handle to observe completion. Abortion takes effect when the task yields control, and destructors are part of cleanup. If cleanup needs async work, write a shutdown step that awaits it. Ordinary `Drop` cannot await.
 
 ## Exercise
 

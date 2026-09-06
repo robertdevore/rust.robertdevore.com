@@ -1,4 +1,4 @@
-{"title":"Iterators and closures without hidden ownership","stage":2,"minutes":45,"summary":"Read item types, captures, laziness, and short-circuiting results.","example":"11_iterators"}
+{"title":"Iterators and closures","stage":2,"minutes":45,"summary":"Follow iterator items, closure captures, and errors through your code.","example":"11_iterators"}
 ---
 ## An iterator describes a sequence of steps
 
@@ -6,9 +6,9 @@ An iterator produces an `Option<Item>` each time `next` is called. Many adaptors
 
 {{example}}
 
-`rows.iter()` yields references to array elements, so each item is `&&str`. `copied()` copies the small shared reference to give `&str`; it does not duplicate the text allocation. `filter` itself passes a reference to its item to the predicate. Checking these layers explicitly is more reliable than trying random dereferences until the compiler accepts them.
+`rows.iter()` yields references to array elements, so each item is `&&str`. `copied()` copies the small shared reference to give `&str`; it does not duplicate the text allocation. `filter` itself passes a reference to its item to the predicate. Check the item type at each step so you know which references to dereference.
 
-Collecting an iterator of `Result` values into `Result<Vec<_>, _>` stops at the first error. This implements one particular failure policy. Collecting all errors requires a different design and often a different output type. A concise iterator chain is good only when its policy remains clear.
+Collecting an iterator of `Result` values into `Result<Vec<_>, _>` stops at the first error. This chooses to stop on the first failure. Collecting all errors requires a different design and often a different output type. A concise iterator chain is good only when its policy remains clear.
 
 ## Closures capture what they need
 
@@ -18,9 +18,9 @@ A closure that consumes a captured string by returning it can generally run only
 
 ## Prefer understandable data flow
 
-A loop is often clearer when you must update several counters, attach a line number to an error, and maintain a record-size limit. Iterator chains are not morally superior to loops. Both can compile efficiently; neither establishes performance without measurement.
+A loop is often clearer when you must update several counters, attach a line number to an error, and maintain a record-size limit. Use whichever is easier to follow. Both can compile efficiently; measure before claiming one is faster.
 
-Avoid collecting merely to iterate immediately again when a streaming consumer would do. Conversely, collecting is sensible when you need random access or multiple passes. If a borrow makes your chain hard to express, inspect the ownership boundary before cloning the entire input collection.
+Avoid collecting merely to iterate immediately again when a streaming consumer would do. Conversely, collecting is sensible when you need random access or multiple passes. If a borrow makes the chain difficult to write, check who needs to own the data before cloning the collection.
 
 ## Exercise
 
@@ -28,7 +28,7 @@ Change the fixture to include `BOGUS bad` between two valid records. Show that c
 
 <details><summary>Solution and acceptance check</summary>
 
-The first version returns `UnknownLevel`, with no successful vector. The second can retain two valid records and one rejection count. Its report must identify the rejection; silently reporting two records as if the input were wholly valid is misleading. Use a `match` on each result to make that policy visible.
+The first version returns `UnknownLevel`, with no successful vector. The second can retain two valid records and one rejection count. Report the rejected record too, so users know the counts are incomplete. Use a `match` on each result to make that policy visible.
 
 </details>
 

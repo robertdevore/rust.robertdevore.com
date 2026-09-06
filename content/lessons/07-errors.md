@@ -1,4 +1,4 @@
-{"title":"Errors as part of the interface","stage":1,"minutes":50,"summary":"Distinguish malformed input, missing values, broken assumptions, and operational failure.","example":"07_errors"}
+{"title":"Errors as part of the interface","stage":1,"minutes":50,"summary":"Use Option, Result, and useful error messages to handle different kinds of failure.","example":"07_errors","headingIds":{"Decide what happens after an error":"failure-should-have-a-defined-effect"}}
 ---
 ## Four different situations
 
@@ -12,15 +12,15 @@ The `?` operator returns early on error, converting it through the relevant `Fro
 
 The parser defines `MissingSeparator`, `UnknownLevel`, and `EmptyMessage`. A caller can match those variants without parsing an English sentence. `Display` provides a human-facing description. `std::error::Error` connects nested causes: the final reader error includes a line number and keeps the parser error as its source.
 
-A concrete error enum often fits a reusable library. A boxed error can be convenient at an application boundary where the main job is reporting and exiting. `thiserror` can derive repetitive error implementations, while application-oriented libraries can add context. Neither changes the need to choose which failures are meaningful. Our capstone implements its small error types directly to keep that choice visible and its core dependency-free.
+A concrete error enum often fits a reusable library. A boxed error can be convenient at an application boundary where the main job is reporting and exiting. `thiserror` can derive repetitive error implementations, while application-oriented libraries can add context. You still need to decide which failures callers should distinguish. Our capstone defines its few error types directly, keeping the core free of dependencies.
 
 Avoid returning only “operation failed”. Useful context includes which operation failed and, where appropriate, which record. Do not echo secret input or entire untrusted records into logs. A line number and error category are sufficient for our tool.
 
-## Failure should have a defined effect
+## Decide what happens after an error
 
-The capstone returns no partial summary on the first invalid record. That is a product decision: users should not mistake partial counts for complete counts. An alternative “skip bad records” mode would need explicit counts of rejected rows, documentation, and tests. Silently ignoring errors changes the meaning of the result.
+The capstone returns no partial summary on the first invalid record. This prevents users from mistaking partial counts for a complete result. An alternative “skip bad records” mode would need explicit counts of rejected rows, documentation, and tests. Silently ignoring errors changes the meaning of the result.
 
-`unwrap` and `expect` are reasonable in tests when failure must fail the test. In application paths, justify why the error is impossible or handle it. An `expect` message describes the violated invariant; it should not pretend an operational failure cannot occur. File creation, network reads, and output writes can fail after earlier work has succeeded.
+`unwrap` and `expect` are reasonable in tests when failure must fail the test. In application paths, justify why the error is impossible or handle it. An `expect` message should explain the assumption that failed. Do not use it to dismiss an error that can occur during normal use. File creation, network reads, and output writes can fail after earlier work has succeeded.
 
 ## Exercise
 

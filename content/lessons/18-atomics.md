@@ -1,6 +1,6 @@
-{"title":"Atomics and memory ordering","stage":3,"minutes":60,"summary":"Separate an indivisible counter update from publication of other data.","example":"18_atomics"}
+{"title":"Atomics and memory ordering","stage":3,"minutes":60,"summary":"Use atomic counters and understand why sharing other data needs more than a flag.","example":"18_atomics","headingIds":{"Increment a shared counter":"what-the-counter-actually-promises"}}
 ---
-## What the counter actually promises
+## Increment a shared counter
 
 Several threads increment one atomic counter. Each read-modify-write is atomic, so updates to that counter are not lost. We do not use the counter to announce that unrelated memory is ready.
 
@@ -10,17 +10,17 @@ Several threads increment one atomic counter. Each read-modify-write is atomic, 
 
 ## Publication is a different problem
 
-Imagine one thread writes a payload and then sets a ready flag. Another waits for ready and reads the payload. A relaxed flag does not, by itself, establish the ordering needed to publish unrelated non-atomic memory safely. A release operation paired with an acquire operation that observes it, or an appropriate release sequence, can establish a happens-before relationship. The payload's access pattern still needs a complete proof.
+Imagine one thread writes a payload and then sets a ready flag. Another waits for ready and reads the payload. A relaxed flag does not, by itself, establish the ordering needed to publish unrelated non-atomic memory safely. A release operation paired with an acquire operation that observes it, or an appropriate release sequence, can establish a happens-before relationship. You must also show that every access to the payload follows the memory model's rules.
 
 `SeqCst` adds a global order for sequentially consistent atomic operations, subject to the model's rules. It does not turn a multi-step algorithm into a transaction, prevent deadlocks, or make ordinary conflicting memory accesses acceptable. Stronger ordering can simplify a proof, but it does not replace one.
 
-We deliberately do not build a hand-written lock-free queue here. Such a queue also requires reasoning about ownership, allocation reclamation, ABA-like situations, progress, and every interleaving—not just selecting an ordering enum.
+We will not build a lock-free queue here. Besides memory ordering, it needs rules for ownership and memory reclamation, protection against values changing and changing back unnoticed (the ABA problem), and an argument that operations make progress under every allowed schedule.
 
 ## Keep layers separate
 
-The Rust atomic API specifies language-level behavior and follows a memory-model framework documented by the standard library. Supported atomic widths depend on the target. OS scheduling and hardware instructions affect performance and progress in ways that are not synonymous with Rust's safety guarantees.
+The Rust atomic API specifies language-level behavior and follows a memory-model framework documented by the standard library. Supported atomic widths depend on the target. OS scheduling and hardware instructions also affect speed and progress. Rust's safety guarantees do not settle those questions.
 
-An algorithm can be data-race-free and still produce an incorrect result. Two individually atomic operations may interleave with another thread between them. “Atomic” modifies an operation, not the whole surrounding business rule. Even a sequence of atomics may need a mutex to implement the intended invariant simply.
+An algorithm can be data-race-free and still produce an incorrect result. Two individually atomic operations may interleave with another thread between them. An atomic operation does not make the surrounding sequence of steps atomic. Even a sequence of atomics may need a mutex to implement the intended invariant simply.
 
 ## Exercise
 

@@ -76,3 +76,5 @@ npm run build
 `howl.json` references the actual Rust example. `showcase/` contains reviewed deterministic SVG, Markdown, HTML, and a local gallery; the build publishes selected downloadable cards only. Howl does not compile Rust. Rust checks remain in `verify:rust`. CI detects source/artifact drift without requiring Kujo for ordinary website builds. CSS/JS are minified and content-hashed for immutable caching; the vendored SiteKit source remains unchanged.
 
 The dated SEO audit in `seo-audit/2026-09-06/` includes the sealed baseline, production receipts, before/after data, and a future measurement plan. No ranking or AI-citation improvement is claimed without platform data.
+
+The homepage uses the approved launch artwork at `assets/rust-course-launch.png` for Open Graph and X, with its actual 1536×1024 dimensions. Other pages use the Howl card. Lesson `headingIds` preserve existing section links when headings are edited. Apply the Orwell writing skill to prose while preserving technical meaning and examples.

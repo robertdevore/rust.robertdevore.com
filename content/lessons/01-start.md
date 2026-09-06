@@ -1,12 +1,12 @@
-{"title":"Set up your Rust workshop","stage":1,"minutes":35,"summary":"Install a reproducible toolchain, read a Cargo project, and make the first edit.","example":"01_setup"}
+{"title":"Set up Rust","stage":1,"minutes":35,"summary":"Install Rust, find your way around a Cargo project, and run your first example.","example":"01_setup","headingIds":{"What you will build":"the-work-you-will-build"}}
 ---
-## The work you will build
+## What you will build
 
 You will build **Fieldnotes**, a command-line tool that reads event records and reports counts. A record looks like `WARN disk almost full`. The final tool accepts a file or standard input, reports malformed records with line numbers, rejects oversized records, and works without loading the entire file. Each stage makes a specific improvement to that program.
 
-This is a course for people who can use a terminal and edit a text file. No prior Rust is required. If programming is new to you, spend extra time on the next lesson: functions, conditions, and loops will appear throughout the course. Expect roughly 25–40 hours including the exercises, not just the reading times shown beside lessons.
+You need a terminal and a text editor, but no Rust experience. If you are new to programming, take your time with the next lesson: you will use functions, conditions, and loops throughout the course. Allow roughly 25–40 hours for reading and practice.
 
-Read in sequence on your first pass. Run the example, predict the effect of a change, then try the exercise before opening its solution. Compiler drills intentionally fail; the rest of the repository should remain green. Keep your exercise work on a local branch so you can compare it with the reference implementation.
+Read in sequence on your first pass. Run the example, predict the effect of a change, then try the exercise before opening its solution. Compiler drills are meant to fail. All other examples and checks should pass. Keep your exercise work on a local branch so you can compare it with the reference implementation.
 
 ## Install and locate the tools
 
@@ -22,7 +22,7 @@ cargo --version
 cargo run --locked --example 01_setup
 ```
 
-The repository selects Rust **1.98.1**, edition **2024**, through `rust-toolchain.toml`. Rustup installs the pinned compiler if necessary. The edition is a package-level language compatibility choice; the compiler release is the executable doing the compilation. An edition does not freeze the standard library at its release date. This course does not change your global default toolchain.
+The repository selects Rust **1.98.1**, edition **2024**, through `rust-toolchain.toml`. Rustup installs the pinned compiler if necessary. The edition selects the language compatibility rules for a package. The compiler version selects the program that compiles it. Choosing an edition does not freeze the standard library. This course does not change your global default toolchain.
 
 ## Read the project before editing
 
@@ -46,4 +46,4 @@ Any greeting is valid. The executable must print the new text once and exit succ
 
 ## Check your understanding
 
-If the editor says a name is invalid but `cargo check` succeeds, check that rust-analyzer uses this repository's toolchain and workspace. Compiler output is your reproducible starting point. See [Cargo's first steps](https://doc.rust-lang.org/cargo/getting-started/first-steps.html) and the [Edition Guide](https://doc.rust-lang.org/edition-guide/editions/index.html).
+If the editor says a name is invalid but `cargo check` succeeds, check that rust-analyzer uses this repository's toolchain and workspace. Start with the compiler output: anyone using the same toolchain can check it. See [Cargo's first steps](https://doc.rust-lang.org/cargo/getting-started/first-steps.html) and the [Edition Guide](https://doc.rust-lang.org/edition-guide/editions/index.html).

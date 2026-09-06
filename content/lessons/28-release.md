@@ -1,6 +1,6 @@
-{"title":"Release, maintain, and keep learning","stage":5,"minutes":60,"summary":"Review a public API, reproduce a release, and maintain the course's evidence.","example":"13_cargo"}
+{"title":"Release, maintain, and keep learning","stage":5,"minutes":60,"summary":"Check compatibility, release a reproducible build, and keep the course up to date.","example":"13_cargo","headingIds":{"Make the release reproducible":"a-release-is-a-promise-others-can-reproduce","Review the public API":"review-the-public-rust-surface"}}
 ---
-## A release is a promise others can reproduce
+## Make the release reproducible
 
 The course repository is independently buildable with Node 24 and Rust 1.98.1. The website and Rust application have separate build paths. The website is static HTML with local assets; the application is an ordinary Cargo workspace. Neither needs another course repository at runtime or build time.
 
@@ -8,13 +8,13 @@ Before releasing a change, run the documented checks from a clean checkout. Keep
 
 {{example}}
 
-## Review the public Rust surface
+## Review the public API
 
-A public field, trait bound, enum variant, and error type can become a downstream dependency. Removing an implementation or adding a required bound can break callers even when your own tests compile. Adding variants to an exhaustive public enum can be breaking. `#[non_exhaustive]` may reserve evolution room, but it also limits what callers can construct or match, so choose it deliberately before publishing.
+Other programs may rely on your public fields, trait bounds, enum variants, and error types. Removing an implementation or adding a required bound can break callers even when your own tests compile. Adding variants to an exhaustive public enum can be breaking. `#[non_exhaustive]` leaves room to add variants or fields later, but limits how callers construct or match values. Decide whether you need it before publishing.
 
 Cargo's semver guidance and tools such as cargo-semver-checks help identify API changes. They do not prove behavioral compatibility, validate a file format, or establish that every performance expectation is preserved. Write release notes around observable effects, including changes to limits and failure behavior.
 
-The course packages set `publish = false`: they are local teaching artifacts. Publishing a general-purpose crate would require selecting an appropriate name, reviewing metadata and licensing, testing a packaged archive, and establishing a support policy. `cargo install --path` already gives learners an installable application without pretending it is a maintained public registry package.
+The course packages set `publish = false` because they are for local study. Publishing a general-purpose crate would require selecting an appropriate name, reviewing metadata and licensing, testing a packaged archive, and establishing a support policy. Learners can install the application with `cargo install --path`; it does not need a registry release.
 
 ## A practical maintenance loop
 
@@ -40,6 +40,6 @@ Accepting lowercase broadens the file grammar even if function signatures remain
 
 ## Where to go next
 
-Choose a real problem: a network service, an embedded peripheral, a library used by another team, or a performance-sensitive tool. Learn its domain constraints rather than collecting advanced syntax. Revisit ownership, errors, synchronization, and invariants at each boundary. The goal is software whose behavior another developer can understand and maintain.
+Choose a real problem: a network service, an embedded peripheral, a library used by another team, or a performance-sensitive tool. Learn what that problem requires. Study new language features as you need them. Revisit ownership, errors, synchronization, and invariants at each boundary. The goal is software whose behavior another developer can understand and maintain.
 
 Sources: [semver compatibility](https://doc.rust-lang.org/cargo/reference/semver.html), [publishing](https://doc.rust-lang.org/cargo/reference/publishing.html), and [cargo-semver-checks](https://github.com/obi1kenobi/cargo-semver-checks).

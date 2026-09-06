@@ -1,10 +1,10 @@
-{"title":"Stable Rust and the horizon","stage":4,"minutes":60,"summary":"Read current initiatives without turning goals, experiments, or compiler limitations into stable promises.","example":"24_const","drill":"const_trait"}
+{"title":"Stable Rust and work in progress","stage":4,"minutes":60,"summary":"Tell stable features apart from nightly experiments and plans that may change.","example":"24_const","drill":"const_trait","headingIds":{"The version this course uses":"a-freshness-point-not-a-prediction"}}
 ---
-## A freshness point, not a prediction
+## The version this course uses
 
-This course was verified on **2026-09-06** against **Rust 1.98.1**, edition **2024**. The September point release fixes a vtable-generation miscompilation in 1.98.0, so the course pins the corrected version. Compiler versions are part of the evidence, not a cosmetic badge.
+This course was verified on **2026-09-06** against **Rust 1.98.1**, edition **2024**. The September point release fixes a vtable-generation miscompilation in 1.98.0, so the course pins the corrected version. The compiler version matters when you reproduce the examples and diagnostics.
 
-A feature can have both a stable subset and an active extension. The following table classifies the specific claim being made. A project goal is an agreement to work on something, not a stabilization guarantee or deadline you should build a production dependency around.
+A feature can have both a stable subset and an active extension. The following table classifies the specific claim being made. A project goal means work is planned. It does not guarantee a stable release or a date you can rely on.
 
 | Area | Today | On the horizon / status |
 | --- | --- | --- |
@@ -25,7 +25,7 @@ A feature can have both a stable subset and an active extension. The following t
 
 {{example}}
 
-This small array example uses stable const generics. Do not extrapolate from it to arbitrary compile-time execution of trait methods.
+This small array example uses stable const generics, which do not let arbitrary trait methods run at compile time.
 
 {{drill}}
 
@@ -33,9 +33,9 @@ The August program update also records two discontinued efforts: the specific **
 
 ## How to update an explanation
 
-First reproduce behavior on the exact stable compiler. Then read the Reference, stabilization record, and relevant goal or tracking issue. If the compiler rejects a safe pattern because its analysis is conservative, describe the currently supported expression and the limitation. Do not say the language philosophically forbids it unless a language rule actually does.
+First reproduce behavior on the exact stable compiler. Then read the Reference, stabilization record, and relevant goal or tracking issue. If the compiler rejects a safe pattern because its analysis is conservative, describe the currently supported expression and the limitation. Distinguish a limit in the compiler's analysis from a rule of the language.
 
-No feature in the table is called deprecated merely because a more ergonomic alternative is being explored. Historical descriptions need dates. Proposed designs can change or fail to ship. The core exercises avoid nightly language features; only the optional unsafe verification toolchain uses nightly for Miri.
+Work on an easier alternative does not make an existing feature deprecated. Historical descriptions need dates. Proposed designs can change or fail to ship. The core exercises avoid nightly language features; only the optional unsafe verification toolchain uses nightly for Miri.
 
 ## Exercise
 

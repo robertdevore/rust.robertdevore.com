@@ -1,14 +1,14 @@
-{"title":"Borrowing and reborrowing","stage":1,"minutes":55,"summary":"Reason about permitted access over time instead of treating references as spare owners.","example":"04_borrowing","drill":"alias"}
+{"title":"Borrowing and reborrowing","stage":1,"minutes":55,"summary":"Use shared and exclusive references, and see when a borrow ends.","example":"04_borrowing","drill":"alias"}
 ---
 ## Access has a duration
 
-A reference gives access to another value without taking ownership of that value. `&T` provides shared access; `&mut T` provides exclusive access subject to reborrowing. These are access disciplines, not merely a distinction between methods that happen to mutate and methods that happen to read.
+A reference gives access to another value without taking ownership of that value. `&T` provides shared access; `&mut T` provides exclusive access subject to reborrowing. The distinction controls who may access the value, not just whether a method writes to it.
 
-When a shared reference remains usable, mutation of the referenced ordinary data must not invalidate what it observes. When an exclusive reference grants access, conflicting access through independent paths is restricted. Later lessons refine this with interior mutability and unsafe aliasing rules; “exactly one pointer exists” is not the model.
+While a shared reference remains usable, other code cannot change ordinary data in ways that violate that reference. An exclusive reference prevents conflicting access through other paths. This does not mean only one pointer can exist. Later lessons cover interior mutability and the rules unsafe code must follow.
 
 {{example}}
 
-The last use of `view` occurs before `append`. The compiler therefore permits the mutation without waiting for the closing brace of `main`. This is the practical effect of non-lexical lifetime analysis: borrow requirements follow uses and control flow, not simply the textual scope of a variable.
+The last use of `view` occurs before `append`. The compiler therefore permits the mutation without waiting for the closing brace of `main`. This is called non-lexical lifetime analysis: the compiler follows where you use a borrow, not just where its variable was declared.
 
 The second call passes `&mut *exclusive`. It temporarily **reborrows** through the exclusive reference. During that smaller borrow, the original reference cannot be used for conflicting access. After the call, the original reference becomes usable again. Function calls commonly insert reborrows implicitly; writing one explicitly helps you see the relationship.
 
@@ -16,7 +16,7 @@ The second call passes `&mut *exclusive`. It temporarily **reborrows** through t
 
 A vector or string may need a larger allocation when it grows. A reference into its old allocation could then point at freed storage. But the access rules do more than prevent reallocation: even a mutation that fits in existing capacity may conflict with a live shared borrow. Reserving capacity is not permission to violate a reference's access contract.
 
-The borrow checker reasons about places with varying precision. It can understand disjoint struct fields and many slice splits exposed through safe APIs. A pair of arbitrary indices requires a check that they differ; use a library method that expresses this fact rather than assuming that a failed proof means the algorithm is fundamentally impossible in Rust.
+The borrow checker reasons about places with varying precision. It can understand disjoint struct fields and many slice splits exposed through safe APIs. For arbitrary indices, it needs to know that they differ. Use a library method that checks this. A borrow-checking error may mean the compiler needs a clearer way to see that the accesses are separate.
 
 ## Compiler drill
 

@@ -1,12 +1,12 @@
-{"title":"Futures before runtimes","stage":3,"minutes":55,"summary":"Understand polling, wakeups, state machines, and what await does not promise.","example":"19_futures"}
+{"title":"Futures before runtimes","stage":3,"minutes":55,"summary":"Learn how polling and wakeups work before adding an async runtime.","example":"19_futures","headingIds":{"When a future starts running":"creating-a-future-is-not-starting-a-thread"}}
 ---
-## Creating a future is not starting a thread
+## When a future starts running
 
-An `async` block produces a future. Calling an async function similarly constructs a future; its body progresses when polled. A future describes a computation that may be incomplete. The `Future` trait connects it to a poller through `poll`, `Context`, and `Poll`.
+An `async` block produces a future. Calling an async function also creates a future. Its body runs when the future is polled. A future describes a computation that may be incomplete. The `Future` trait connects it to a poller through `poll`, `Context`, and `Poll`.
 
 {{example}}
 
-This future completes immediately, so one poll with a no-op waker is sufficient. This is **not an executor**. A future that returns `Pending` must arrange a wakeup when it may make progress. Repeatedly polling it in a tight loop would waste CPU, and never polling it again would stall it. Do not adapt this demonstration into a general runtime.
+This future completes immediately, so one poll with a no-op waker is sufficient. This example has **no executor** to schedule later polls. A future that returns `Pending` must arrange a wakeup when it may make progress. Repeatedly polling it in a tight loop would waste CPU, and never polling it again would stall it. Do not adapt this demonstration into a general runtime.
 
 ## Suspension stores state
 
@@ -14,13 +14,13 @@ Conceptually, the compiler transforms an async body into a state machine contain
 
 `.await` drives another future as part of the current task. If it is not ready, the current future may yield `Pending` to its caller. If it is already ready, execution may continue immediately. An `.await` is not a promise of a scheduler yield, a new task, or parallel execution.
 
-After a future returns `Ready`, callers must not assume polling it again is supported. The contract permits implementations to panic or otherwise fail to behave usefully on another poll, within safety requirements. A runtime tracks completion so ordinary application code need not manually manage this state.
+After a future returns `Ready`, callers must not assume polling it again is supported. Polling it again may panic or produce no useful result, though it must still obey Rust's safety rules. A runtime tracks completion so ordinary application code need not manually manage this state.
 
 ## Cancellation belongs to ownership
 
-Dropping a pending future commonly cancels that instance of the computation by dropping its stored state. It does not undo an external effect that already occurred. A request may have reached a server even if the caller stopped awaiting its response. Cancellation policy therefore belongs in application design: retries may need identifiers or transactional semantics.
+Dropping a pending future commonly cancels that instance of the computation by dropping its stored state. It does not undo an external effect that already occurred. A request may have reached a server even if the caller stopped awaiting its response. Decide what cancellation means for your application. A retry may need a request ID or a transaction to avoid repeating an external change.
 
-A spawned task has a runtime-owned lifecycle. Dropping its join handle is not necessarily the same as dropping the future inside it. Tokio, for example, detaches a task when its handle is dropped. Always read the runtime's contract before treating a handle as a cancellation guard.
+The runtime manages a spawned task until it finishes or is cancelled. Dropping its join handle is not necessarily the same as dropping the future inside it. Tokio, for example, detaches a task when its handle is dropped. Always read the runtime's contract before treating a handle as a cancellation guard.
 
 ## Exercise
 

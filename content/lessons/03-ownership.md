@@ -1,20 +1,20 @@
-{"title":"Ownership, places, and moves","stage":1,"minutes":55,"summary":"Track who owns a value and why passing it can make its old location unavailable.","example":"03_ownership","drill":"moved"}
+{"title":"Ownership, places, and moves","stage":1,"minutes":55,"summary":"Learn what moves, what gets copied, and when a borrow is enough.","example":"03_ownership","drill":"moved"}
 ---
 ## A value and the place holding it
 
-A **place** is a location a program can refer to: a local variable, a field, an indexed element, or a dereferenced pointer. A **value** is what the location currently holds. Keep these separate. Moving a value transfers it out of a place; it does not mean the underlying heap allocation must physically move.
+A **place** is a location a program can refer to: a local variable, a field, an indexed element, or a dereferenced pointer. A **value** is what the location currently holds. Moving a value transfers it out of a place. The heap allocation it owns may stay at the same address.
 
-`String` owns a UTF-8 buffer. Its representation tracks that allocation; treating two independent `String` values as its owners without arranging shared ownership would risk releasing the same allocation twice. Moving a `String` makes the source unavailable until reinitialized. The destination becomes responsible for the value's ordinary destruction.
+`String` owns and tracks a UTF-8 buffer. If two independent strings both tried to free that buffer, the program could free the same memory twice. Moving a `String` makes the source unavailable until reinitialized. The new owner normally drops the value when its drop scope ends.
 
 {{example}}
 
-`label(&original)` lends access, so it does not take ownership of the string. `let stored = original` does transfer the value. No second character buffer is needed. A compiler may eliminate even the movement of the small representation; source-level move semantics are not a promised machine instruction.
+`label(&original)` lends access, so it does not take ownership of the string. `let stored = original` does transfer the value. No second character buffer is needed. The compiler may optimize away the move itself. A move in Rust source does not promise a particular machine instruction.
 
 ## Copy is a type property
 
 Some types implement `Copy`: using their values in a move-like context implicitly copies them and leaves the source usable. Integers are familiar examples. Heap versus stack is not the rule: references can be copied, and a stack-resident struct can own a non-`Copy` resource. A type implementing `Drop` cannot also implement `Copy`.
 
-`Clone` requests duplication explicitly, but its meaning depends on the type. Cloning a `String` duplicates its text; cloning an `Rc` adds an owner to shared data. Before adding `.clone()` to satisfy an error, ask whether the recipient needs ownership, whether a temporary borrow is sufficient, and whether both parts of the program really need independent values.
+`Clone` requests duplication explicitly, but its meaning depends on the type. Cloning a `String` duplicates its text; cloning an `Rc` adds an owner to shared data. Before adding `.clone()` to fix an error, ask what the caller needs: ownership, a temporary borrow, or a separate copy it can change.
 
 ## Follow destruction, not just allocation
 

@@ -1,10 +1,13 @@
 [
   {
-    "title": "Set up your Rust workshop",
+    "title": "Set up Rust",
     "stage": 1,
     "minutes": 35,
-    "summary": "Install a reproducible toolchain, read a Cargo project, and make the first edit.",
+    "summary": "Install Rust, find your way around a Cargo project, and run your first example.",
     "example": "01_setup",
+    "headingIds": {
+      "What you will build": "the-work-you-will-build"
+    },
     "number": 1,
     "slug": "01-start",
     "url": "/course/01-start/"
@@ -13,8 +16,11 @@
     "title": "Values, functions, and control flow",
     "stage": 1,
     "minutes": 45,
-    "summary": "Express decisions with types, functions, matching, and explicit numeric boundaries.",
+    "summary": "Write functions, choose between cases, and handle numbers that reach their limits.",
     "example": "02_values",
+    "headingIds": {
+      "Write your first function": "start-with-a-question-the-program-answers"
+    },
     "number": 2,
     "slug": "02-values",
     "url": "/course/02-values/"
@@ -23,7 +29,7 @@
     "title": "Ownership, places, and moves",
     "stage": 1,
     "minutes": 55,
-    "summary": "Track who owns a value and why passing it can make its old location unavailable.",
+    "summary": "Learn what moves, what gets copied, and when a borrow is enough.",
     "example": "03_ownership",
     "drill": "moved",
     "number": 3,
@@ -34,7 +40,7 @@
     "title": "Borrowing and reborrowing",
     "stage": 1,
     "minutes": 55,
-    "summary": "Reason about permitted access over time instead of treating references as spare owners.",
+    "summary": "Use shared and exclusive references, and see when a borrow ends.",
     "example": "04_borrowing",
     "drill": "alias",
     "number": 4,
@@ -45,18 +51,26 @@
     "title": "Strings, slices, and collections",
     "stage": 1,
     "minutes": 45,
-    "summary": "Use UTF-8 deliberately and choose ownership at collection boundaries.",
+    "summary": "Work with UTF-8 text and choose when collections should own or borrow data.",
     "example": "05_text",
+    "headingIds": {
+      "Choose a collection": "select-storage-from-the-operations",
+      "Limit how much input you store": "bound-growth-at-the-input-boundary"
+    },
     "number": 5,
     "slug": "05-text",
     "url": "/course/05-text/"
   },
   {
-    "title": "Structs, enums, and useful states",
+    "title": "Structs, enums, and program states",
     "stage": 1,
     "minutes": 45,
-    "summary": "Make domain distinctions visible without building an elaborate type architecture.",
+    "summary": "Represent your data with structs and enums, and reject invalid states.",
     "example": "06_model",
+    "headingIds": {
+      "Use an enum for alternatives": "model-the-alternatives-you-actually-have",
+      "Start with the simpler type": "restraint-is-part-of-design"
+    },
     "number": 6,
     "slug": "06-model",
     "url": "/course/06-model/"
@@ -65,8 +79,11 @@
     "title": "Errors as part of the interface",
     "stage": 1,
     "minutes": 50,
-    "summary": "Distinguish malformed input, missing values, broken assumptions, and operational failure.",
+    "summary": "Use Option, Result, and useful error messages to handle different kinds of failure.",
     "example": "07_errors",
+    "headingIds": {
+      "Decide what happens after an error": "failure-should-have-a-defined-effect"
+    },
     "number": 7,
     "slug": "07-errors",
     "url": "/course/07-errors/"
@@ -75,7 +92,7 @@
     "title": "Stage build: the first event counter",
     "stage": 1,
     "minutes": 70,
-    "summary": "Combine control flow and borrowed text into a small working program.",
+    "summary": "Build a working event counter with loops, matching, and borrowed text.",
     "example": "08_stage_one",
     "number": 8,
     "slug": "08-first-build",
@@ -85,7 +102,7 @@
     "title": "Lifetimes describe relationships",
     "stage": 2,
     "minutes": 55,
-    "summary": "Design borrowed results without pretending annotations extend storage.",
+    "summary": "Connect borrowed results to their inputs without trying to extend the life of data.",
     "example": "09_lifetimes",
     "drill": "dangling",
     "number": 9,
@@ -93,20 +110,23 @@
     "url": "/course/09-lifetimes/"
   },
   {
-    "title": "Traits where abstraction earns its place",
+    "title": "Traits and reusable interfaces",
     "stage": 2,
     "minutes": 55,
-    "summary": "Use standard interfaces, associated types, and dispatch intentionally.",
+    "summary": "Use standard traits, associated types, and static or dynamic dispatch.",
     "example": "10_traits",
+    "headingIds": {
+      "Write to more than one destination": "start-from-a-useful-boundary"
+    },
     "number": 10,
     "slug": "10-traits",
     "url": "/course/10-traits/"
   },
   {
-    "title": "Iterators and closures without hidden ownership",
+    "title": "Iterators and closures",
     "stage": 2,
     "minutes": 45,
-    "summary": "Read item types, captures, laziness, and short-circuiting results.",
+    "summary": "Follow iterator items, closure captures, and errors through your code.",
     "example": "11_iterators",
     "number": 11,
     "slug": "11-iterators",
@@ -116,8 +136,11 @@
     "title": "Stage build: a bounded streaming library",
     "stage": 2,
     "minutes": 90,
-    "summary": "Separate parsing from I/O and enforce memory limits before input grows.",
+    "summary": "Build a library that parses records as it reads them and limits buffer growth.",
     "example": "12_stage_two",
+    "headingIds": {
+      "Check the limit before copying": "limit-before-accumulation"
+    },
     "number": 12,
     "slug": "12-reader",
     "url": "/course/12-reader/"
@@ -126,18 +149,24 @@
     "title": "Cargo, modules, and dependency boundaries",
     "stage": 2,
     "minutes": 55,
-    "summary": "Read the actual workspace, feature graph, lockfile, and release configuration.",
+    "summary": "Understand packages, modules, features, and the dependencies your program builds.",
     "example": "13_cargo",
+    "headingIds": {
+      "Update dependencies with care": "lock-and-update-deliberately"
+    },
     "number": 13,
     "slug": "13-cargo",
     "url": "/course/13-cargo/"
   },
   {
-    "title": "Tests, diagnostics, and complementary tools",
+    "title": "Tests, compiler errors, and verification tools",
     "stage": 2,
     "minutes": 60,
-    "summary": "Test contracts and failures, and use compiler output without inventing it.",
+    "summary": "Test expected behavior and failures, then use compiler checks and Clippy to catch more mistakes.",
     "example": "14_testing",
+    "headingIds": {
+      "Test what callers need": "test-the-promise-a-caller-relies-on"
+    },
     "number": 14,
     "slug": "14-testing",
     "url": "/course/14-testing/"
@@ -146,7 +175,7 @@
     "title": "Interior mutability and shared ownership",
     "stage": 3,
     "minutes": 50,
-    "summary": "Distinguish reference counts, runtime borrowing, and synchronization.",
+    "summary": "Choose between reference counting, runtime borrow checks, and locks.",
     "example": "15_interior",
     "number": 15,
     "slug": "15-interior",
@@ -156,9 +185,13 @@
     "title": "Threads, Send, and Sync",
     "stage": 3,
     "minutes": 55,
-    "summary": "Transfer or borrow work safely while keeping completion and failure explicit.",
+    "summary": "Move or borrow data across threads, then handle completion and failure.",
     "example": "16_threads",
     "drill": "send",
+    "headingIds": {
+      "Pass data to a thread": "ownership-crosses-a-boundary",
+      "What Send and Sync mean": "the-two-marker-traits-answer-different-questions"
+    },
     "number": 16,
     "slug": "16-threads",
     "url": "/course/16-threads/"
@@ -167,8 +200,11 @@
     "title": "Channels, locks, and shutdown",
     "stage": 3,
     "minutes": 55,
-    "summary": "Choose ownership transfer or shared state, and reason about waiting.",
+    "summary": "Pass work through channels, protect shared data, and shut down without deadlocks.",
     "example": "17_sync",
+    "headingIds": {
+      "What each layer controls": "distinguish-the-guarantees"
+    },
     "number": 17,
     "slug": "17-synchronization",
     "url": "/course/17-synchronization/"
@@ -177,8 +213,11 @@
     "title": "Atomics and memory ordering",
     "stage": 3,
     "minutes": 60,
-    "summary": "Separate an indivisible counter update from publication of other data.",
+    "summary": "Use atomic counters and understand why sharing other data needs more than a flag.",
     "example": "18_atomics",
+    "headingIds": {
+      "Increment a shared counter": "what-the-counter-actually-promises"
+    },
     "number": 18,
     "slug": "18-atomics",
     "url": "/course/18-atomics/"
@@ -187,8 +226,11 @@
     "title": "Futures before runtimes",
     "stage": 3,
     "minutes": 55,
-    "summary": "Understand polling, wakeups, state machines, and what await does not promise.",
+    "summary": "Learn how polling and wakeups work before adding an async runtime.",
     "example": "19_futures",
+    "headingIds": {
+      "When a future starts running": "creating-a-future-is-not-starting-a-thread"
+    },
     "number": 19,
     "slug": "19-futures",
     "url": "/course/19-futures/"
@@ -197,29 +239,41 @@
     "title": "Tokio tasks, blocking, and cancellation",
     "stage": 3,
     "minutes": 70,
-    "summary": "Use a runtime with bounded queues, explicit task results, and deliberate shutdown.",
+    "summary": "Run Tokio tasks, limit queued work, and handle blocking calls and cancellation.",
     "example": "20_async",
+    "headingIds": {
+      "What Tokio provides": "five-layers-five-responsibilities",
+      "Limit queued work": "bound-the-work-that-can-accumulate",
+      "Check what cancellation leaves behind": "cancellation-needs-an-operation-specific-contract"
+    },
     "number": 20,
     "slug": "20-async",
     "url": "/course/20-async/"
   },
   {
-    "title": "Pin and async trait boundaries",
+    "title": "Pin and async traits",
     "stage": 4,
     "minutes": 65,
-    "summary": "Understand address-sensitive values and stable alternatives to native async dyn dispatch.",
+    "summary": "Learn what pinning protects and how to return futures through a trait object.",
     "example": "21_pin",
     "drill": "async_dyn",
+    "headingIds": {
+      "What Pin keeps in place": "pin-is-a-promise-about-a-pointee",
+      "Calling async methods through trait objects": "stable-async-traits-are-not-every-async-trait-feature"
+    },
     "number": 21,
     "slug": "21-pin",
     "url": "/course/21-pin/"
   },
   {
-    "title": "Stage build: an async ingestion pipeline",
+    "title": "Stage build: process records with async tasks",
     "stage": 4,
     "minutes": 80,
-    "summary": "Keep one owner of the aggregate while producers hand over bounded work.",
+    "summary": "Send records through a bounded queue and keep one task in charge of the counts.",
     "example": "22_stage_three",
+    "headingIds": {
+      "What the queue limit covers": "explain-the-limits-honestly"
+    },
     "number": 22,
     "slug": "22-async-build",
     "url": "/course/22-async-build/"
@@ -228,7 +282,7 @@
     "title": "Unsafe boundaries and soundness",
     "stage": 4,
     "minutes": 85,
-    "summary": "Audit one small abstraction with explicit invariants, edge cases, and Miri.",
+    "summary": "Review a small unsafe function, explain its safety rules, and check it with Miri.",
     "source": "crates/unsafe-lab/src/lib.rs",
     "number": 23,
     "slug": "23-unsafe",
@@ -238,19 +292,22 @@
     "title": "Measure performance and resource use",
     "stage": 4,
     "minutes": 60,
-    "summary": "Build a reproducible experiment before changing allocation, dispatch, or build profiles.",
+    "summary": "Measure speed and memory use before changing how the program works.",
     "example": "23_performance",
     "number": 24,
     "slug": "24-performance",
     "url": "/course/24-performance/"
   },
   {
-    "title": "Stable Rust and the horizon",
+    "title": "Stable Rust and work in progress",
     "stage": 4,
     "minutes": 60,
-    "summary": "Read current initiatives without turning goals, experiments, or compiler limitations into stable promises.",
+    "summary": "Tell stable features apart from nightly experiments and plans that may change.",
     "example": "24_const",
     "drill": "const_trait",
+    "headingIds": {
+      "The version this course uses": "a-freshness-point-not-a-prediction"
+    },
     "number": 25,
     "slug": "25-horizon",
     "url": "/course/25-horizon/"
@@ -259,7 +316,7 @@
     "title": "FFI, serialization, and public contracts",
     "stage": 4,
     "minutes": 55,
-    "summary": "Design boundaries where Rust types alone cannot validate the other side.",
+    "summary": "Define ownership, data formats, and errors when calling code outside Rust.",
     "source": "examples/25_ffi.rs",
     "number": 26,
     "slug": "26-interop",
@@ -269,8 +326,11 @@
     "title": "Capstone: ship Fieldnotes",
     "stage": 5,
     "minutes": 150,
-    "summary": "Assemble the tested parser and bounded reader into an installable command-line product.",
+    "summary": "Combine the parser and reader into a command-line tool you can install and use.",
     "source": "crates/audit-cli/src/main.rs",
+    "headingIds": {
+      "Check your finished tool": "review-rubric"
+    },
     "number": 27,
     "slug": "27-capstone",
     "url": "/course/27-capstone/"
@@ -279,8 +339,12 @@
     "title": "Release, maintain, and keep learning",
     "stage": 5,
     "minutes": 60,
-    "summary": "Review a public API, reproduce a release, and maintain the course's evidence.",
+    "summary": "Check compatibility, release a reproducible build, and keep the course up to date.",
     "example": "13_cargo",
+    "headingIds": {
+      "Make the release reproducible": "a-release-is-a-promise-others-can-reproduce",
+      "Review the public API": "review-the-public-rust-surface"
+    },
     "number": 28,
     "slug": "28-release",
     "url": "/course/28-release/"

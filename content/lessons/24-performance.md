@@ -1,16 +1,16 @@
-{"title":"Measure performance and resource use","stage":4,"minutes":60,"summary":"Build a reproducible experiment before changing allocation, dispatch, or build profiles.","example":"23_performance"}
+{"title":"Measure performance and resource use","stage":4,"minutes":60,"summary":"Measure speed and memory use before changing how the program works.","example":"23_performance"}
 ---
 ## A measurement starts with a question
 
-Does parsing allocate? Does input reading dominate runtime? Does parallelism help on representative files? These are different questions requiring different evidence. “Rust is fast” does not answer any of them.
+Does parsing allocate? Does input reading dominate runtime? Does parallelism help on representative files? Each question needs its own test. “Rust is fast” does not answer any of them.
 
 {{example}}
 
-The example demonstrates timing and `black_box`, but its single number is not a benchmark conclusion. Startup, optimization, CPU frequency, background work, and tiny sample size can dominate. `black_box` is a best-effort optimization barrier useful in experiments, not a mathematical guarantee about generated code.
+The example shows how to time code and use `black_box`. One timing result is not enough to draw a conclusion. Startup, optimization, CPU frequency, background work, and tiny sample size can dominate. `black_box` is a best-effort optimization barrier useful in experiments, not a mathematical guarantee about generated code.
 
 ## Design the experiment
 
-Run optimized builds when evaluating optimized production behavior. Record compiler version, target, profile, input distribution, hardware, and sample count. Compare equivalent outputs and error policies. Include empty input, typical records, long records near the limit, and malformed data if those occur in the workload.
+Run optimized builds when evaluating optimized production behavior. Record compiler version, target, profile, input distribution, hardware, and sample count. Make sure both versions produce the same output and handle errors the same way. Include empty input, typical records, long records near the limit, and malformed data if those occur in the workload.
 
 Separate warm-up from samples where appropriate. Report a distribution rather than one favorable run. Change one significant variable at a time. If you claim lower memory use, measure it or prove a specific bound and state precisely which allocations the bound covers.
 
@@ -20,7 +20,7 @@ Our parser borrows message text rather than allocating a new string. That is vis
 
 A profile may show that filesystem I/O dominates, in which case replacing an iterator with a loop is unlikely to matter. It may show formatting costs, in which case current standard-library APIs deserve review before adding a crate. Rust 1.98 introduced integer buffer formatting APIs, but our three-line-sized summary does not justify optimizing that path without evidence.
 
-Monomorphization can improve inlining and also increase compile time or code size. Dynamic dispatch has indirection costs and can reduce duplication. `Arc::clone` updates an atomic count; `String::clone` copies text. Treat these as different operations. Use explicit ownership reasoning to remove accidental work before introducing low-level unsafe code.
+Monomorphization can improve inlining and also increase compile time or code size. Dynamic dispatch has indirection costs and can reduce duplication. `Arc::clone` updates an atomic count; `String::clone` copies text. Treat these as different operations. Check whether unnecessary copies or allocations cause the slowdown before reaching for unsafe code.
 
 ## Exercise
 
@@ -28,7 +28,7 @@ Compare parsing borrowed records with a version that creates a new owned message
 
 <details><summary>Solution and acceptance check</summary>
 
-Keep input bytes and loop counts identical, consume results so they cannot trivially disappear, and record toolchain/profile. The owned version should demonstrate an additional allocation policy, but timing may vary. A useful conclusion states the tested workload and uncertainty. If the difference is below noise, report that rather than selecting the fastest run.
+Keep input bytes and loop counts identical, consume results so they cannot trivially disappear, and record toolchain/profile. The owned version allocates new message strings, but the timing difference may vary. A useful conclusion states the tested workload and uncertainty. If the difference is below noise, report that rather than selecting the fastest run.
 
 </details>
 
