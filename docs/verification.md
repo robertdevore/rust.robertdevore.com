@@ -35,8 +35,14 @@ This resolves the earlier production blocker. The initial suggestion to disable 
 
 ## Deployment
 
-Cloudflare Workers Static Assets, Worker `rust-course`, custom domain `rust.robertdevore.com`, production version `4a413a45-3077-4786-9e3c-79ad79110c09`. Wrangler manages the attached custom domain; no manual duplicate DNS record was created. Production has no application Worker handler or dynamic backend. Local OAuth deployment is operational. The optional manual GitHub deployment workflow requires scoped repository secrets if the maintainer elects to use it.
+Cloudflare Workers Static Assets, Worker `rust-course`, custom domain `rust.robertdevore.com`, production version `bbc174ab-d02c-4eec-958c-ef030abcbc3f`. Wrangler manages the attached custom domain; no manual duplicate DNS record was created. Production has no application Worker handler or dynamic backend. Local OAuth deployment is operational. The optional manual GitHub deployment workflow requires scoped repository secrets if the maintainer elects to use it.
 
 ## Limits
 
 Tests and Miri are evidence, not a proof of all behavior. Automated accessibility checks cover selected rules and pages; the layout and keyboard checks supplement them. The FFI example does not link an external C library. The timing example is not a performance benchmark claim. Feature statuses are accurate to the stated freshness point, not a promise they remain unchanged.
+
+## SiteKit visual update · 2026-09-06
+
+Vendored Kujo SiteKit 1.0.0 from upstream commit c0d199e06bc926e29de87b7cd983ee3d54db9cda; all distribution manifest checksums match. Departure Mono is self-hosted and verified loaded in production, with body/control/code font families using the SiteKit font token. Removed the header symbol and themed all scroll containers, including dark code panels, through standard and WebKit scrollbar rules. Native forced-colors behavior remains available.
+
+Build/static checks passed. Full local and public desktop/mobile browser suites passed, including selected axe checks and no console errors or unexpected failed requests. Desktop homepage and mobile lesson screenshots were visually reviewed. Computed production code-scrollbar colors are thumb rgb(184,121,92), track rgb(38,41,35). Public DNS/TLS/routes/assets/metadata verification passed.

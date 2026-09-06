@@ -306,7 +306,19 @@
     {
       "url": "https://stats.g.doubleclick.net/g/collect",
       "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
     }
   ],
-  "checkedAt": "2026-09-06T18:44:49.674Z"
+  "checkedAt": "2026-09-06T19:01:48.136Z"
 }
