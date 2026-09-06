@@ -1,9 +1,9 @@
 {
-  "verifiedAt": "2026-09-06T19:01:52.089Z",
+  "verifiedAt": "2026-09-06T19:11:41.088Z",
   "origin": "https://rust.robertdevore.com",
   "dns": [
-    "104.21.76.202",
-    "172.67.200.180"
+    "172.67.200.180",
+    "104.21.76.202"
   ],
   "certificate": {
     "authorized": true,
@@ -49,7 +49,7 @@
     {
       "path": "/assets/site.css",
       "type": "text/css",
-      "bytes": 17696
+      "bytes": 18141
     },
     {
       "path": "/assets/site.js",
