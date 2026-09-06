@@ -1,0 +1,12 @@
+error[E0379]: functions in traits cannot be declared const
+ --> drills/const_trait.rs:1:17
+  |
+1 | trait Compute { const fn compute(&self) -> usize; }
+  |                 ^^^^^-
+  |                 |
+  |                 functions in traits cannot be const
+  |                 help: remove the `const`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0379`.

@@ -1,0 +1,23 @@
+[workspace]
+members = [".", "crates/audit-core", "crates/audit-cli", "crates/unsafe-lab"]
+resolver = "3"
+
+[workspace.package]
+edition = "2024"
+rust-version = "1.98.1"
+license = "MIT"
+
+[package]
+name = "rust-course-examples"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish = false
+
+[dependencies]
+audit-core = { path = "crates/audit-core" }
+tokio = { version = "1", default-features = false, features = ["rt", "macros", "sync", "time", "test-util"] }
+
+[lints.rust]
+unsafe_code = "forbid"

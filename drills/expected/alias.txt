@@ -1,0 +1,13 @@
+error[E0502]: cannot borrow `text` as mutable because it is also borrowed as immutable
+ --> drills/alias.rs:4:5
+  |
+3 |     let shared = &text;
+  |                  ----- immutable borrow occurs here
+4 |     text.push('!');
+  |     ^^^^^^^^^^^^^^ mutable borrow occurs here
+5 |     println!("{shared}");
+  |                ------ immutable borrow later used here
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0502`.

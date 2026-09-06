@@ -1,0 +1,19 @@
+error[E0038]: the trait `Fetch` is not dyn compatible
+ --> drills/async_dyn.rs:2:16
+  |
+2 | fn consume(_: &dyn Fetch) {}
+  |                ^^^^^^^^^ `Fetch` is not dyn compatible
+  |
+note: for a trait to be dyn compatible it needs to allow building a vtable
+      for more information, visit <https://doc.rust-lang.org/reference/items/traits.html#dyn-compatibility>
+ --> drills/async_dyn.rs:1:24
+  |
+1 | trait Fetch { async fn get(&self) -> usize; }
+  |       -----            ^^^ ...because method `get` is `async`
+  |       |
+  |       this trait is not dyn compatible...
+  = help: consider moving `get` to another trait
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0038`.

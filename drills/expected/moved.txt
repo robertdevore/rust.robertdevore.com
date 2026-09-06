@@ -1,0 +1,18 @@
+error[E0382]: borrow of moved value: `original`
+ --> drills/moved.rs:4:16
+  |
+2 |     let original = String::from("record");
+  |         -------- move occurs because `original` has type `String`, which does not implement the `Copy` trait
+3 |     let stored = original;
+  |                  -------- value moved here
+4 |     println!("{original} {stored}");
+  |                ^^^^^^^^ value borrowed here after move
+  |
+help: consider cloning the value if the performance cost is acceptable
+  |
+3 |     let stored = original.clone();
+  |                          ++++++++
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0382`.
