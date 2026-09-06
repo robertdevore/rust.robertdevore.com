@@ -8,7 +8,7 @@ A small Node SSG renders Markdown with markdown-it and highlights tested Rust so
 
 Lesson metadata is one JSON line followed by a `---` separator and Markdown. Required fields are title, stage, minutes, summary. An example/source/drill pointer embeds actual repository files at build time. Every exercise has acceptance criteria and a disclosed solution. `docs/curriculum.json` is a generated inventory; edit lessons, then rebuild it. The build must fail on a missing source or unexpanded include.
 
-Search content is a local JSON index; results use DOM textContent. Progress stores only lesson slugs locally. No analytics, external fonts, or account service. The social card is a reproducible typographic PNG rendered by Playwright, not a borrowed image.
+Search content is a local JSON index; results use DOM textContent. Progress stores only lesson slugs locally. Cloudflare injects Web Analytics and Zaraz/Google Analytics at the edge, matching the owner’s Python course setup. The response CSP permits the Cloudflare beacon and the observed Google collection endpoints. There are no application analytics calls, external fonts, or account service. The social card is a reproducible typographic PNG rendered by Playwright, not a borrowed image.
 
 ## Rust workspace
 

@@ -20,7 +20,7 @@ Formatting, Clippy, tests, and compiler checks complement human review. They do 
 
 ## Your progress and privacy
 
-Marking a lesson complete saves its identifier in local storage on this browser. Progress does not sync across devices. Search runs locally using the site's generated index. The site uses no analytics scripts, accounts, cookies, or third-party font requests. Hosting providers can still process ordinary request logs.
+Marking a lesson complete saves its identifier in local storage on this browser. Progress does not sync across devices. Search runs locally using the site's generated index. Traffic is measured through Cloudflare Web Analytics and the site's Cloudflare Zaraz integration with Google Analytics. These services process visit and browser information; the Google integration may use cookies. Lesson completion stays in your browser and is not sent by the course to analytics. The course has no account service or third-party font requests. Hosting providers also process ordinary request logs.
 
 You can clear your lesson progress here:
 
