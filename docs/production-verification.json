@@ -1,15 +1,15 @@
 {
-  "verifiedAt": "2026-09-06T18:14:27.824Z",
+  "verifiedAt": "2026-09-06T18:41:46.988Z",
   "origin": "https://rust.robertdevore.com",
   "dns": [
-    "104.21.76.202",
-    "172.67.200.180"
+    "172.67.200.180",
+    "104.21.76.202"
   ],
   "certificate": {
     "authorized": true,
-    "validFrom": "Jul 29 06:22:37 2026 GMT",
-    "validTo": "Oct 27 07:19:50 2026 GMT",
-    "subjectAltName": "DNS:robertdevore.com, DNS:*.robertdevore.com"
+    "validFrom": "Sep  6 17:15:45 2026 GMT",
+    "validTo": "Dec  5 18:15:40 2026 GMT",
+    "subjectAltName": "DNS:robertdevore.com, DNS:rust.robertdevore.com, DNS:*.rust.robertdevore.com"
   },
   "routes": [
     "/",

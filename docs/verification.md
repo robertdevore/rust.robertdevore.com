@@ -23,15 +23,19 @@ Browser checks include desktop routes, every mobile lesson, search, persisted pr
 
 An initial axe failure for sidebar/TOC contrast was fixed and CI passed afterward. Chrome search Escape required explicit dialog closing. A transient mobile layout measurement was changed to an eventual assertion that still rejects sustained overflow. Initial Miri setup hit local process limits; two build jobs resolved that setup failure. No application soundness failure was observed.
 
-## Production browser gate — pending
+## Production browser gate — passed
 
-The full browser suite passes in CI against the built application. Running it against the public hostname exposed Cloudflare Zaraz scripts inherited from the parent zone. Their third-party tracking requests violate the application’s intentional `connect-src` policy and cause console errors. Production HTTP checks above pass, but the public browser console gate is not yet satisfied.
+The complete suite passed against `https://rust.robertdevore.com` after matching the Python course’s inherited Cloudflare analytics setup. All 32 desktop routes, 28 mobile lessons, search, persisted progress, compiler disclosure, deep refresh, menus, and selected axe checks passed with no console errors or unexpected failed requests (see browser-verification.json).
 
-The narrow remediation is a Cloudflare Configuration Rule matching only `http.host eq "rust.robertdevore.com"`, with `disable_zaraz: true` and `disable_rum: true`. No other hostname or security setting should change. The connected API rejected creation with authentication error 10000; local browser control is unavailable. After the rule is applied, rerun `SITE_URL=https://rust.robertdevore.com BROWSER_CHANNEL=chrome npm run test:browser` and production verification, then replace this pending status with the result. See [Cloudflare settings documentation](https://developers.cloudflare.com/rules/configuration-rules/settings/).
+The owner explicitly requested traffic tracking like python.robertdevore.com. Both sites load Cloudflare Web Analytics and Zaraz/Google Analytics. The Rust CSP now permits the Cloudflare beacon plus the two observed Google connection origins. The About page discloses the analytics. No disable rule or unrelated Cloudflare setting was changed. Separate fresh-browser verification observed the Zaraz and beacon scripts returning 200, Google collection returning 204/200, and Rust’s `/cdn-cgi/rum` returning 204 (see analytics-verification.json). Dashboard aggregation was not inspected.
+
+The route sweep records `net::ERR_ABORTED` separately only for the two known background Google analytics endpoints, because rapid navigation cancels them. Console errors, CSP failures, application asset failures, and all other network failures still fail the suite. Waiting for global network idle was inappropriate: the Google audience request can remain open after its successful 200 response. The dedicated analytics checks prove successful delivery independently of navigation cancellation.
+
+This resolves the earlier production blocker. The initial suggestion to disable analytics was superseded by the owner’s explicit preference to preserve it. Reference: [Cloudflare CSP requirements](https://developers.cloudflare.com/fundamentals/reference/policies-compliances/content-security-policies/).
 
 ## Deployment
 
-Cloudflare Workers Static Assets, Worker `rust-course`, custom domain `rust.robertdevore.com`, production version `5d294a51-f88a-4386-a603-55c57c394203`. Wrangler manages the attached custom domain; no manual duplicate DNS record was created. Production has no application Worker handler or dynamic backend. Local OAuth deployment is operational. The optional manual GitHub deployment workflow requires scoped repository secrets if the maintainer elects to use it.
+Cloudflare Workers Static Assets, Worker `rust-course`, custom domain `rust.robertdevore.com`, production version `4a413a45-3077-4786-9e3c-79ad79110c09`. Wrangler manages the attached custom domain; no manual duplicate DNS record was created. Production has no application Worker handler or dynamic backend. Local OAuth deployment is operational. The optional manual GitHub deployment workflow requires scoped repository secrets if the maintainer elects to use it.
 
 ## Limits
 

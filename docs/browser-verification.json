@@ -1,0 +1,312 @@
+{
+  "base": "https://rust.robertdevore.com",
+  "checked": [
+    "/",
+    "/course/",
+    "/practice/",
+    "/about/",
+    "/course/01-start/",
+    "/course/02-values/",
+    "/course/03-ownership/",
+    "/course/04-borrowing/",
+    "/course/05-text/",
+    "/course/06-model/",
+    "/course/07-errors/",
+    "/course/08-first-build/",
+    "/course/09-lifetimes/",
+    "/course/10-traits/",
+    "/course/11-iterators/",
+    "/course/12-reader/",
+    "/course/13-cargo/",
+    "/course/14-testing/",
+    "/course/15-interior/",
+    "/course/16-threads/",
+    "/course/17-synchronization/",
+    "/course/18-atomics/",
+    "/course/19-futures/",
+    "/course/20-async/",
+    "/course/21-pin/",
+    "/course/22-async-build/",
+    "/course/23-unsafe/",
+    "/course/24-performance/",
+    "/course/25-horizon/",
+    "/course/26-interop/",
+    "/course/27-capstone/",
+    "/course/28-release/"
+  ],
+  "accessibility": [
+    {
+      "route": "/",
+      "violations": []
+    },
+    {
+      "route": "/course/",
+      "violations": []
+    },
+    {
+      "route": "/course/03-ownership/",
+      "violations": []
+    },
+    {
+      "route": "/about/",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "failed": [],
+  "cancelledAnalytics": [
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "checkedAt": "2026-09-06T18:44:49.674Z"
+}

@@ -1,0 +1,83 @@
+{
+  "verifiedDate": "2026-09-06",
+  "deploymentVersion": "4a413a45-3077-4786-9e3c-79ad79110c09",
+  "comparison": [
+    {
+      "host": "python.robertdevore.com",
+      "scripts": [
+        "https://python.robertdevore.com/cdn-cgi/zaraz/s.js",
+        "https://python.robertdevore.com/assets/sitekit/sitekit.js",
+        "https://python.robertdevore.com/assets/js/syntax-highlight.js",
+        "https://python.robertdevore.com/assets/js/docs.js",
+        "https://python.robertdevore.com/assets/js/kujo-webmcp.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      ],
+      "requests": [
+        {
+          "origin": "https://static.cloudflareinsights.com",
+          "path": "/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495",
+          "status": 200
+        },
+        {
+          "origin": "https://python.robertdevore.com",
+          "path": "/cdn-cgi/zaraz/s.js",
+          "status": 200
+        },
+        {
+          "origin": "https://www.google.com",
+          "path": "/ads/ga-audiences",
+          "status": 200
+        },
+        {
+          "origin": "https://stats.g.doubleclick.net",
+          "path": "/g/collect",
+          "status": 204
+        }
+      ],
+      "errors": []
+    },
+    {
+      "host": "rust.robertdevore.com",
+      "scripts": [
+        "https://rust.robertdevore.com/cdn-cgi/zaraz/s.js",
+        "https://rust.robertdevore.com/assets/site.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      ],
+      "requests": [
+        {
+          "origin": "https://static.cloudflareinsights.com",
+          "path": "/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495",
+          "status": 200
+        },
+        {
+          "origin": "https://rust.robertdevore.com",
+          "path": "/cdn-cgi/zaraz/s.js",
+          "status": 200
+        },
+        {
+          "origin": "https://stats.g.doubleclick.net",
+          "path": "/g/collect",
+          "status": 204
+        },
+        {
+          "origin": "https://www.google.com",
+          "path": "/ads/ga-audiences",
+          "status": 200
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "rustRum": [
+    {
+      "event": "response",
+      "url": "https://rust.robertdevore.com/cdn-cgi/rum",
+      "status": 204
+    },
+    {
+      "event": "finished",
+      "url": "https://rust.robertdevore.com/cdn-cgi/rum"
+    }
+  ],
+  "scope": "Fresh browser contexts; client request delivery verified. Analytics dashboard aggregation was not inspected."
+}
