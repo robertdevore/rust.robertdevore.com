@@ -1,0 +1,39 @@
+{
+  "windowStart": "2026-09-06T00:00:00Z",
+  "windowEndExclusive": "2026-09-06T21:10:00Z",
+  "host": "rust.robertdevore.com",
+  "limitation": "Includes launch QA automation and owner traffic; not organic audience or representative 28-day field CWV.",
+  "success": true,
+  "status": 200,
+  "result": {
+    "viewer": {
+      "accounts": [
+        {
+          "rumPageloadEventsAdaptiveGroups": [
+            {
+              "count": 439,
+              "dimensions": {
+                "requestHost": "rust.robertdevore.com"
+              },
+              "sum": {
+                "visits": 437
+              }
+            }
+          ],
+          "rumWebVitalsEventsAdaptiveGroups": [
+            {
+              "count": 428,
+              "quantiles": {
+                "cumulativeLayoutShiftP75": 0,
+                "interactionToNextPaintP75": 112000,
+                "largestContentfulPaintP75": 312000
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "errors": [],
+  "messages": []
+}
