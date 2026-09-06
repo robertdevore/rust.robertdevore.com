@@ -1,0 +1,341 @@
+{
+  "verifiedAt": "2026-09-06T21:15:09.999206+00:00",
+  "client": "unmodified Python urllib default user agent",
+  "checks": [
+    {
+      "path": "/course-index.json",
+      "status": 200,
+      "type": "application/json"
+    },
+    {
+      "path": "/course/01-start/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/01-start.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/02-values/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/02-values.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/03-ownership/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/03-ownership.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/04-borrowing/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/04-borrowing.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/05-text/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/05-text.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/06-model/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/06-model.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/07-errors/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/07-errors.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/08-first-build/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/08-first-build.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/09-lifetimes/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/09-lifetimes.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/10-traits/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/10-traits.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/11-iterators/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/11-iterators.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/12-reader/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/12-reader.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/13-cargo/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/13-cargo.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/14-testing/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/14-testing.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/15-interior/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/15-interior.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/16-threads/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/16-threads.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/17-synchronization/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/17-synchronization.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/18-atomics/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/18-atomics.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/19-futures/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/19-futures.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/20-async/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/20-async.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/21-pin/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/21-pin.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/22-async-build/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/22-async-build.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/23-unsafe/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/23-unsafe.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/24-performance/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/24-performance.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/25-horizon/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/25-horizon.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/26-interop/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/26-interop.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/27-capstone/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/27-capstone.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/course/28-release/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/lessons/28-release.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/course/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/about/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/practice/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/llms.txt",
+      "status": 200,
+      "type": "text/plain"
+    },
+    {
+      "path": "/llms-full.txt",
+      "status": 200,
+      "type": "text/plain"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "type": "text/plain"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "type": "application/xml"
+    },
+    {
+      "path": "/assets/built/site.cc20d680ec0f.js",
+      "status": 200,
+      "cache": "public, max-age=31536000, immutable"
+    },
+    {
+      "path": "/assets/built/site.ff8a2211cd0d.css",
+      "status": 200,
+      "cache": "public, max-age=31536000, immutable"
+    }
+  ]
+}

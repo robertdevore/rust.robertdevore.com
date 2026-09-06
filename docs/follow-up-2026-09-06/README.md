@@ -1,6 +1,10 @@
 # Edge access and measurement follow-up · 2026-09-06
 
-Status: pending owner dashboard action; do not mark the access issue resolved.
+Status: access restriction resolved and verified after owner deployment. Historical diagnosis and attempted API write below are preserved.
+
+## Verified resolution
+
+Owner deployed configuration rule 1e38411d9a904c6f8a096cf75de885b3 in ruleset ce2c311b9eca42d6be49bf2fc7ea11cc on 2026-09-06T21:14:23Z. API readback confirms enabled=true, exact Rust hostname GET/HEAD expression, and only bic=false. Unmodified Python urllib now receives HTTP200 for all32 canonical pages, all28 Markdown exports (SHA-256 matches), JSON index, both text indexes, robots, sitemap and both bundled assets:67 requests with no failures. See python-after.json. Analytics settings were not changed. Original audit remains immutable. Remaining zone-wide Bot Fight Mode performance tradeoff and search-console data needs are independent of this resolved defect.
 
 ## Confirmed cause and prepared fix
 
