@@ -1,0 +1,41 @@
+name: Verify course
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      CARGO_BUILD_JOBS: 2
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: rustup toolchain install 1.98.1 --profile minimal --component clippy --component rustfmt
+      - run: npm run verify:rust
+      - run: npm run build && npm test
+      - run: npx playwright install --with-deps chromium
+      - name: Browser contracts
+        run: |
+          npx wrangler dev --port 4173 > /tmp/rust-course-preview.log 2>&1 &
+          for attempt in $(seq 1 30); do curl -fsS http://localhost:4173/ > /dev/null && break || sleep 1; done
+          npm run test:browser
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: browser-evidence
+          path: work/qa/
+  miri:
+    runs-on: ubuntu-latest
+    env:
+      CARGO_BUILD_JOBS: 2
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - run: rustup toolchain install nightly-2026-09-05 --profile minimal --component miri --component rust-src
+      - run: cargo +nightly-2026-09-05 miri test -p unsafe-lab

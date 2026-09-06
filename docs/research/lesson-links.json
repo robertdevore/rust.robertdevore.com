@@ -1,0 +1,470 @@
+{
+  "checkedAt": "2026-09-06T18:10:01.700Z",
+  "results": [
+    {
+      "url": "https://rust-lang.org/tools/install/",
+      "status": 200,
+      "finalUrl": "https://rust-lang.org/tools/install/"
+    },
+    {
+      "url": "https://doc.rust-lang.org/edition-guide/editions/index.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/edition-guide/editions/index.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/cargo/getting-started/first-steps.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/cargo/getting-started/first-steps.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/book/ch03-05-control-flow.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/book/ch03-05-control-flow.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/reference/expressions.html#place-expressions-and-value-expressions",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/reference/expressions.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/primitive.u32.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/primitive.u32.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/reference/statements-and-expressions.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/reference/statements-and-expressions.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/reference/destructors.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/reference/destructors.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/marker/trait.Copy.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/marker/trait.Copy.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/primitive.str.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/primitive.str.html"
+    },
+    {
+      "url": "https://rustc-dev-guide.rust-lang.org/borrow_check.html",
+      "status": 200,
+      "finalUrl": "https://rustc-dev-guide.rust-lang.org/borrow_check.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/collections/index.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/collections/index.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/book/ch06-00-enums.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/book/ch06-00-enums.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/reference/visibility-and-privacy.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/reference/visibility-and-privacy.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/vec/struct.Vec.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/result/",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/result/"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/error/trait.Error.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/error/trait.Error.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/primitive.slice.html#method.split_at_mut",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/primitive.slice.html"
+    },
+    {
+      "url": "https://rust-lang.github.io/api-guidelines/",
+      "status": 200,
+      "finalUrl": "https://rust-lang.github.io/api-guidelines/"
+    },
+    {
+      "url": "https://doc.rust-lang.org/reference/lifetime-elision.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/reference/lifetime-elision.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/primitive.str.html#method.split_once",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/primitive.str.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/primitive.str.html#method.lines",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/primitive.str.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/reference/trait-bounds.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/reference/trait-bounds.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/io/trait.Write.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/io/trait.Write.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/reference/items/traits.html#dyn-compatibility",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/reference/items/traits.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/reference/items/implementations.html#trait-implementation-coherence",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/reference/items/implementations.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/iter/trait.Iterator.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/iter/trait.Iterator.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/result/enum.Result.html#impl-FromIterator%3CResult%3CA,+E%3E%3E-for-Result%3CV,+E%3E",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/result/enum.Result.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/str/fn.from_utf8.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/str/fn.from_utf8.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/cargo/reference/workspaces.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/cargo/reference/workspaces.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/io/trait.BufRead.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/io/trait.BufRead.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/reference/types/closure.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/reference/types/closure.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/cargo/reference/features.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/cargo/reference/features.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/cargo/reference/profiles.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/cargo/reference/profiles.html"
+    },
+    {
+      "url": "https://github.com/dtolnay/thiserror",
+      "status": 200,
+      "finalUrl": "https://github.com/dtolnay/thiserror"
+    },
+    {
+      "url": "https://doc.rust-lang.org/cargo/reference/resolver.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/cargo/reference/resolver.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/io/struct.Cursor.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/io/struct.Cursor.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/rustc/json.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/rustc/json.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/stable/clippy/usage.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/stable/clippy/usage.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/cargo/commands/cargo-test.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/cargo/commands/cargo-test.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/cell/struct.RefCell.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/cell/struct.RefCell.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/cell/struct.UnsafeCell.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/cell/struct.UnsafeCell.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/thread/fn.scope.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/thread/fn.scope.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/marker/trait.Send.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/marker/trait.Send.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/book/ch16-02-message-passing.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/book/ch16-02-message-passing.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/sync/atomic/",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/sync/atomic/"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/sync/mpsc/fn.sync_channel.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/sync/mpsc/fn.sync_channel.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/sync/struct.Mutex.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/sync/struct.Mutex.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/rc/",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/rc/"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/future/trait.Future.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/future/trait.Future.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/reference/expressions/await-expr.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/reference/expressions/await-expr.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/reference/expressions/block-expr.html#async-blocks",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/reference/expressions/block-expr.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/marker/trait.Sync.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/marker/trait.Sync.html"
+    },
+    {
+      "url": "https://ryhl.io/blog/async-what-is-blocking/",
+      "status": 200,
+      "finalUrl": "https://ryhl.io/blog/async-what-is-blocking/"
+    },
+    {
+      "url": "https://tokio.rs/tokio/topics/shutdown",
+      "status": 200,
+      "finalUrl": "https://tokio.rs/tokio/topics/shutdown"
+    },
+    {
+      "url": "https://tokio.rs/tokio/tutorial/channels",
+      "status": 200,
+      "finalUrl": "https://tokio.rs/tokio/tutorial/channels"
+    },
+    {
+      "url": "https://docs.rs/tokio/latest/tokio/task/struct.JoinHandle.html",
+      "status": 200,
+      "finalUrl": "https://docs.rs/tokio/latest/tokio/task/struct.JoinHandle.html"
+    },
+    {
+      "url": "https://rust-lang.github.io/rfcs/3185-static-async-fn-in-trait.html",
+      "status": 200,
+      "finalUrl": "https://rust-lang.github.io/rfcs/3185-static-async-fn-in-trait.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/pin/",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/pin/"
+    },
+    {
+      "url": "https://tokio.rs/tokio/tutorial/shared-state",
+      "status": 200,
+      "finalUrl": "https://tokio.rs/tokio/tutorial/shared-state"
+    },
+    {
+      "url": "https://mara.nl/atomics/memory-ordering.html",
+      "status": 200,
+      "finalUrl": "https://mara.nl/atomics/memory-ordering.html"
+    },
+    {
+      "url": "https://docs.rs/tokio/latest/tokio/task/struct.JoinSet.html",
+      "status": 200,
+      "finalUrl": "https://docs.rs/tokio/latest/tokio/task/struct.JoinSet.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/slice/fn.from_raw_parts_mut.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/slice/fn.from_raw_parts_mut.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/reference/behavior-considered-undefined.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/reference/behavior-considered-undefined.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/hint/fn.black_box.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/hint/fn.black_box.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/nomicon/",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/nomicon/"
+    },
+    {
+      "url": "https://docs.rs/tokio/latest/tokio/sync/mpsc/",
+      "status": 200,
+      "finalUrl": "https://docs.rs/tokio/latest/tokio/sync/mpsc/"
+    },
+    {
+      "url": "https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/",
+      "status": 200,
+      "finalUrl": "https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/"
+    },
+    {
+      "url": "https://blog.rust-lang.org/inside-rust/2026/08/31/program-management-2026-jul-aug/",
+      "status": 200,
+      "finalUrl": "https://blog.rust-lang.org/inside-rust/2026/08/31/program-management-2026-jul-aug/"
+    },
+    {
+      "url": "https://blog.rust-lang.org/2026/09/03/Rust-1.98.1/",
+      "status": 200,
+      "finalUrl": "https://blog.rust-lang.org/2026/09/03/Rust-1.98.1/"
+    },
+    {
+      "url": "https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/",
+      "status": 200,
+      "finalUrl": "https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/"
+    },
+    {
+      "url": "https://goals.rust-lang.org/2026/polonius.html",
+      "status": 200,
+      "finalUrl": "https://goals.rust-lang.org/2026/polonius.html"
+    },
+    {
+      "url": "https://goals.rust-lang.org/2026/goals.html",
+      "status": 200,
+      "finalUrl": "https://goals.rust-lang.org/2026/goals.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/unstable-book/language-features/unsafe-fields.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/unstable-book/language-features/unsafe-fields.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/unstable-book/language-features/const-trait-impl.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/unstable-book/language-features/const-trait-impl.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/cargo/reference/unstable.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/cargo/reference/unstable.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/reference/items/external-blocks.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/reference/items/external-blocks.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/alloc/trait.Allocator.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/alloc/trait.Allocator.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/reference/type-layout.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/reference/type-layout.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/nomicon/ffi.html#ffi-and-unwinding",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/nomicon/ffi.html"
+    },
+    {
+      "url": "https://goals.rust-lang.org/2026/interop-problem-map.html",
+      "status": 200,
+      "finalUrl": "https://goals.rust-lang.org/2026/interop-problem-map.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/cargo/commands/cargo-install.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/cargo/commands/cargo-install.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/env/fn.args_os.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/env/fn.args_os.html"
+    },
+    {
+      "url": "https://github.com/rust-lang/goals/issues/734",
+      "status": 200,
+      "finalUrl": "https://github.com/rust-lang/goals/issues/734"
+    },
+    {
+      "url": "https://doc.rust-lang.org/cargo/reference/semver.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/cargo/reference/semver.html"
+    },
+    {
+      "url": "https://github.com/rust-lang/miri",
+      "status": 200,
+      "finalUrl": "https://github.com/rust-lang/miri"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/process/struct.ExitCode.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/std/process/struct.ExitCode.html"
+    },
+    {
+      "url": "https://doc.rust-lang.org/cargo/reference/publishing.html",
+      "status": 200,
+      "finalUrl": "https://doc.rust-lang.org/cargo/reference/publishing.html"
+    },
+    {
+      "url": "https://serde.rs/",
+      "status": 200,
+      "finalUrl": "https://serde.rs/"
+    },
+    {
+      "url": "https://robertdevore.com",
+      "status": 200,
+      "finalUrl": "https://robertdevore.com/"
+    },
+    {
+      "url": "https://github.com/obi1kenobi/cargo-semver-checks",
+      "status": 200,
+      "finalUrl": "https://github.com/obi1kenobi/cargo-semver-checks"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+(() => {
+  const key='rust-course-progress-v1';
+  const read=()=>{try {const data=JSON.parse(localStorage.getItem(key)||'[]');return new Set(Array.isArray(data)?data.filter(x=>typeof x==='string'):[]);}catch{return new Set();}};
+  const save=data=>{try{localStorage.setItem(key,JSON.stringify([...data]));return true;}catch{return false;}};
+  const progress=read();
+  const complete=document.querySelector('[data-complete]');
+  const refresh=()=>{if(complete){const done=progress.has(complete.dataset.complete);complete.setAttribute('aria-pressed',String(done));complete.textContent=done?'✓ Lesson complete · undo':'Mark lesson complete';}const summary=document.querySelector('[data-progress-summary]');if(summary)summary.textContent=`${progress.size} of 28 lessons complete on this device.`;};
+  refresh();
+  complete?.addEventListener('click',()=>{const slug=complete.dataset.complete;progress.has(slug)?progress.delete(slug):progress.add(slug);const saved=save(progress);refresh();document.querySelector('[data-complete-status]').textContent=saved?'Progress saved on this device.':'Progress changed for this visit. Browser storage is unavailable.';});
+  document.querySelector('#reset-progress')?.addEventListener('click',()=>{progress.clear();const saved=save(progress);document.querySelector('#reset-status').textContent=saved?'Local progress cleared.':'Browser storage is unavailable.';});
+  const menu=document.querySelector('.menu-toggle');const sidebar=document.querySelector('#course-sidebar');
+  if(!sidebar)menu?.remove();
+  menu?.addEventListener('click',()=>{const opened=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(opened));sidebar?.classList.toggle('is-open',opened);});
+  document.querySelectorAll('.prose pre').forEach(pre=>{const button=document.createElement('button');button.className='copy';button.type='button';button.textContent='Copy';button.setAttribute('aria-label','Copy code');pre.append(button);button.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(pre.querySelector('code').textContent);button.textContent='Copied';}catch{button.textContent='Select code to copy';}setTimeout(()=>button.textContent='Copy',1800);});});
+  const dialog=document.querySelector('#search-dialog'),input=document.querySelector('#search-input'),results=document.querySelector('#search-results'),count=document.querySelector('#search-count');let index;let sequence=0;
+  const open=()=>{dialog.showModal();input.focus();};
+  document.querySelector('.search-open').addEventListener('click',open);
+  document.querySelector('#search-close').addEventListener('click',()=>dialog.close());
+  dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&dialog.open){e.preventDefault();dialog.close();return;}if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)&&!document.activeElement.isContentEditable){e.preventDefault();if(!dialog.open)open();}if(e.key==='Escape'&&sidebar){sidebar.classList.remove('is-open');menu?.setAttribute('aria-expanded','false');}});
+  input.addEventListener('input',async()=>{const run=++sequence;const terms=input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);results.replaceChildren();if(!terms.length){count.textContent='';return;}count.textContent='Searching…';try{if(!index){const response=await fetch('/search-index.json');if(!response.ok)throw Error('search unavailable');index=await response.json();}if(run!==sequence)return;const matches=index.filter(l=>terms.every(t=>(l.title+' '+l.summary+' '+l.text).toLowerCase().includes(t))).sort((a,b)=>Number(terms.every(t=>b.title.toLowerCase().includes(t)))-Number(terms.every(t=>a.title.toLowerCase().includes(t))));count.textContent=matches.length?`${matches.length} matching lessons`:'No lessons found. Try a shorter concept.';for(const l of matches){const li=document.createElement('li'),a=document.createElement('a'),strong=document.createElement('strong'),p=document.createElement('p');a.href=l.url;strong.textContent=`${String(l.number).padStart(2,'0')} / ${l.title}`;p.textContent=l.summary;a.append(strong,p);li.append(a);results.append(li);}}catch{if(run===sequence)count.textContent='Search is unavailable. Browse the curriculum instead.';}});
+})();
