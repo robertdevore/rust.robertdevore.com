@@ -1,0 +1,226 @@
+[
+  {
+    "url": "https://static.rust-lang.org/dist/channel-rust-stable.toml",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.568Z",
+    "sha256": "a7c8774a5fd8441c997d94c029776cbc5eb111e9d72ab5d256fa69866644347e",
+    "local": "33b454381578"
+  },
+  {
+    "url": "https://blog.rust-lang.org/2026/09/03/Rust-1.98.1/",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:28.777Z",
+    "sha256": "875746e7e619ee77e719778af60eafb73051f03023934144b0f67be36489ca12",
+    "local": "d9328b4fe4f0"
+  },
+  {
+    "url": "https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:28.877Z",
+    "sha256": "cffb5bb6892606b2eb3248394ded5b47ff5c3d753acba7366ad6dbef732545cb",
+    "local": "7d867e4a44f5"
+  },
+  {
+    "url": "https://rust-lang.org/governance/teams/lang/",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.055Z",
+    "sha256": "c69802ba0085cb17c39c780480208be419293278f3e71a2d7e1d72c86b726fb1",
+    "local": "c2b7e9ddcaf2"
+  },
+  {
+    "url": "https://rust-lang.org/governance/teams/library/",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.052Z",
+    "sha256": "1b3a3ad1ee54abe4ea3806c048256f54224e6943129c7c9e7056f8385959d8a7",
+    "local": "292be6e200e3"
+  },
+  {
+    "url": "https://rust-lang.org/governance/teams/compiler/",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.123Z",
+    "sha256": "c3e4d5eb4c46885852a25efcf8843410a0e3f2047e5f8d39155c39c965913ccd",
+    "local": "e3bda6f117b1"
+  },
+  {
+    "url": "https://rust-lang.org/governance/teams/dev-tools/",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.063Z",
+    "sha256": "5e9205f562153fcd02c7643981bf6c11b65395b5b4ec5c9e817f1be287f1da8f",
+    "local": "d9dee3f61d6c"
+  },
+  {
+    "url": "https://goals.rust-lang.org/2026/goals.html",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.142Z",
+    "sha256": "9fb285ae5bc6dc3e427945acf2a0d665a162ba1b3f68dfcff57de34bd0396189",
+    "local": "e80fe5eda52e"
+  },
+  {
+    "url": "https://goals.rust-lang.org/2026/roadmaps.html",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.046Z",
+    "sha256": "4db26bcf2b2e67d55c3328fda3eb5a124bc5dbccff2fa40f65c29883ebe94e71",
+    "local": "838d695131d1"
+  },
+  {
+    "url": "https://lang-team.rust-lang.org/design_notes.html",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.144Z",
+    "sha256": "11527ed674c18845111d3b51b1977aaa9cefceb4a88a991fd2996cb987d0a00d",
+    "local": "4b7118c2ddf5"
+  },
+  {
+    "url": "https://rustc-dev-guide.rust-lang.org/borrow_check.html",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.138Z",
+    "sha256": "6b9c278044b86b7d96f63b2cbcc3a523a6c4a8331fc7c5d3cf16e32820555d37",
+    "local": "b9e094c96c1c"
+  },
+  {
+    "url": "https://doc.rust-lang.org/cargo/reference/unstable.html",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.394Z",
+    "sha256": "60e423320c8e9e80083317e46486a4bb2dcec75501b86351255c887cc5bccc1f",
+    "local": "db102dc18f46"
+  },
+  {
+    "url": "https://doc.rust-lang.org/unstable-book/language-features/const-trait-impl.html",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.399Z",
+    "sha256": "96ed7e90e2939dda2a5eeb74e31ae81e0399249c05168eaed86e47bfafa2c7ce",
+    "local": "6bc15d9c3b0e"
+  },
+  {
+    "url": "https://doc.rust-lang.org/unstable-book/library-features/allocator-api.html",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.235Z",
+    "sha256": "56cbedb561ed2cdb552f3ad05c5d4616e63d5abacf48624100987957a09e6606",
+    "local": "3f4a967bdb91"
+  },
+  {
+    "url": "https://doc.rust-lang.org/unstable-book/language-features/unsafe-fields.html",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.234Z",
+    "sha256": "1639c7e707264f7fb121e3340340268a66ffa76aa3148dc4bb70c531cc26166a",
+    "local": "d7489d6ced99"
+  },
+  {
+    "url": "https://github.com/rust-lang/a-mir-formality",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:30.026Z",
+    "sha256": "9e1306877ffe5f0105a225b37431e5df8334ca2627c44e4c2c46359b101414df",
+    "local": "ad8cd174cb1f"
+  },
+  {
+    "url": "https://github.com/rust-lang/trait-system-refactor-initiative",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.980Z",
+    "sha256": "3aa4618d4daff8e244e59cbb2b70a602070d287df669b58974274b2f7a47792c",
+    "local": "71836247f676"
+  },
+  {
+    "url": "https://github.com/rust-lang/lang-team/tree/master/design-meeting-minutes",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:31.307Z",
+    "sha256": "a7519e086cdb847d32422f4381d741aa6b2caf119efe6f0fa886c964a65d56b3",
+    "local": "b8e75408b52d"
+  },
+  {
+    "url": "https://rust-lang.github.io/rfcs/3185-static-async-fn-in-trait.html",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.406Z",
+    "sha256": "8e96ea7448671d9357454b4f58d673d54c6d440a0e8143d448f078bafeaa5edc",
+    "local": "23a2bd8d972d"
+  },
+  {
+    "url": "https://doc.rust-lang.org/std/alloc/trait.Allocator.html",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.498Z",
+    "sha256": "6fbb1688ed67d08af2420840bc831b116d20b1e5cf5790a641d41008f1e94838",
+    "local": "f9c04503998b"
+  },
+  {
+    "url": "https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.403Z",
+    "sha256": "2c8ddcda2fb5c66d3764ecdf262a53e6150ffa6d1550b0f7563ca488c4872836",
+    "local": "748b90f42d33"
+  },
+  {
+    "url": "https://blog.rust-lang.org/inside-rust/2026/08/31/program-management-2026-jul-aug/",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.653Z",
+    "sha256": "8abfb197d80fb30026c6a609dff34ad3277667837fe9d69728b21a391eefd4fe",
+    "local": "73d81174bfb5"
+  },
+  {
+    "url": "https://goals.rust-lang.org/2026/polonius.html",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:30.087Z",
+    "sha256": "517597a4b74d9bbabf3e2f9953916cb142df11d769a731e9c96af7a006f064c3",
+    "local": "f4c2605d2e79"
+  },
+  {
+    "url": "https://bennolossin.github.io/field-projections-designs/",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.470Z",
+    "sha256": "24937e6dfa380b12fdf1723e75ef3fc51839c3628574bcac9faa4ed41c33cbec",
+    "local": "1989f92ec347"
+  },
+  {
+    "url": "https://github.com/rust-lang/goals/issues/734",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:31.438Z",
+    "sha256": "9546930060e44c4d4f4c7082ebf822fc7fbedd4513538f5df827f453c629995f",
+    "local": "d495d660cd87"
+  },
+  {
+    "url": "https://github.com/rust-lang/goals/issues/749",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:30.692Z",
+    "sha256": "f900bc29bcfc032b9ae23f3775841350733121989195d235b5e06e5a8bb797cd",
+    "local": "a2cd32324c67"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/rust-lang/team/main/teams/types.toml",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:30.262Z",
+    "sha256": "8bdfe63d3b1ec8f5585b96d9e35eb67fcdf9008c610719c34b5cd5986f3af281",
+    "local": "48699fd96b98"
+  },
+  {
+    "url": "https://github.com/rust-lang/miri",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:30.112Z",
+    "sha256": "6a011774667d07c7c3c33f1950e6b4ae22c225eac1db2a0e77ba30395680bee2",
+    "local": "41ef1b0cbeb2"
+  },
+  {
+    "url": "https://github.com/obi1kenobi/cargo-semver-checks",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:30.005Z",
+    "sha256": "c985abb1f746c2d06a8f24b8b7c0e4d77adda6bb42c6df815c2f3a722509b641",
+    "local": "bc502f8a2cee"
+  },
+  {
+    "url": "https://developers.cloudflare.com/workers/static-assets/",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.480Z",
+    "sha256": "e3a597c90dd8a9eefa16dd48ac355b585426459bfbd09d381c50b415f6f0eae6",
+    "local": "f2c853e36301"
+  },
+  {
+    "url": "https://developers.cloudflare.com/workers/static-assets/routing/advanced/html-handling/",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.515Z",
+    "sha256": "88a7c22ec623d424c83a1cfce9b6eba7e0ae81c78dc6e8848d4b9ff24e09c646",
+    "local": "1c7368c81705"
+  },
+  {
+    "url": "https://developers.cloudflare.com/workers/configuration/routing/custom-domains/",
+    "status": 200,
+    "checkedAt": "2026-09-06T18:07:29.512Z",
+    "sha256": "8e5bb3780d2775fbdb828ed8f43b74de07ff14e3b8070a6322894524a4a99c85",
+    "local": "ea34a78fe70c"
+  }
+]

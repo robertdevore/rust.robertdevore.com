@@ -1,0 +1,35 @@
+{
+  "toolchain": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "drills": [
+    {
+      "name": "moved",
+      "expected": "E0382",
+      "verified": true
+    },
+    {
+      "name": "alias",
+      "expected": "E0502",
+      "verified": true
+    },
+    {
+      "name": "dangling",
+      "expected": "E0515",
+      "verified": true
+    },
+    {
+      "name": "send",
+      "expected": "E0277",
+      "verified": true
+    },
+    {
+      "name": "async_dyn",
+      "expected": "E0038",
+      "verified": true
+    },
+    {
+      "name": "const_trait",
+      "expected": "E0379",
+      "verified": true
+    }
+  ]
+}

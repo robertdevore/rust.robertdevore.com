@@ -1,0 +1,288 @@
+[
+  {
+    "title": "Set up your Rust workshop",
+    "stage": 1,
+    "minutes": 35,
+    "summary": "Install a reproducible toolchain, read a Cargo project, and make the first edit.",
+    "example": "01_setup",
+    "number": 1,
+    "slug": "01-start",
+    "url": "/course/01-start/"
+  },
+  {
+    "title": "Values, functions, and control flow",
+    "stage": 1,
+    "minutes": 45,
+    "summary": "Express decisions with types, functions, matching, and explicit numeric boundaries.",
+    "example": "02_values",
+    "number": 2,
+    "slug": "02-values",
+    "url": "/course/02-values/"
+  },
+  {
+    "title": "Ownership, places, and moves",
+    "stage": 1,
+    "minutes": 55,
+    "summary": "Track who owns a value and why passing it can make its old location unavailable.",
+    "example": "03_ownership",
+    "drill": "moved",
+    "number": 3,
+    "slug": "03-ownership",
+    "url": "/course/03-ownership/"
+  },
+  {
+    "title": "Borrowing and reborrowing",
+    "stage": 1,
+    "minutes": 55,
+    "summary": "Reason about permitted access over time instead of treating references as spare owners.",
+    "example": "04_borrowing",
+    "drill": "alias",
+    "number": 4,
+    "slug": "04-borrowing",
+    "url": "/course/04-borrowing/"
+  },
+  {
+    "title": "Strings, slices, and collections",
+    "stage": 1,
+    "minutes": 45,
+    "summary": "Use UTF-8 deliberately and choose ownership at collection boundaries.",
+    "example": "05_text",
+    "number": 5,
+    "slug": "05-text",
+    "url": "/course/05-text/"
+  },
+  {
+    "title": "Structs, enums, and useful states",
+    "stage": 1,
+    "minutes": 45,
+    "summary": "Make domain distinctions visible without building an elaborate type architecture.",
+    "example": "06_model",
+    "number": 6,
+    "slug": "06-model",
+    "url": "/course/06-model/"
+  },
+  {
+    "title": "Errors as part of the interface",
+    "stage": 1,
+    "minutes": 50,
+    "summary": "Distinguish malformed input, missing values, broken assumptions, and operational failure.",
+    "example": "07_errors",
+    "number": 7,
+    "slug": "07-errors",
+    "url": "/course/07-errors/"
+  },
+  {
+    "title": "Stage build: the first event counter",
+    "stage": 1,
+    "minutes": 70,
+    "summary": "Combine control flow and borrowed text into a small working program.",
+    "example": "08_stage_one",
+    "number": 8,
+    "slug": "08-first-build",
+    "url": "/course/08-first-build/"
+  },
+  {
+    "title": "Lifetimes describe relationships",
+    "stage": 2,
+    "minutes": 55,
+    "summary": "Design borrowed results without pretending annotations extend storage.",
+    "example": "09_lifetimes",
+    "drill": "dangling",
+    "number": 9,
+    "slug": "09-lifetimes",
+    "url": "/course/09-lifetimes/"
+  },
+  {
+    "title": "Traits where abstraction earns its place",
+    "stage": 2,
+    "minutes": 55,
+    "summary": "Use standard interfaces, associated types, and dispatch intentionally.",
+    "example": "10_traits",
+    "number": 10,
+    "slug": "10-traits",
+    "url": "/course/10-traits/"
+  },
+  {
+    "title": "Iterators and closures without hidden ownership",
+    "stage": 2,
+    "minutes": 45,
+    "summary": "Read item types, captures, laziness, and short-circuiting results.",
+    "example": "11_iterators",
+    "number": 11,
+    "slug": "11-iterators",
+    "url": "/course/11-iterators/"
+  },
+  {
+    "title": "Stage build: a bounded streaming library",
+    "stage": 2,
+    "minutes": 90,
+    "summary": "Separate parsing from I/O and enforce memory limits before input grows.",
+    "example": "12_stage_two",
+    "number": 12,
+    "slug": "12-reader",
+    "url": "/course/12-reader/"
+  },
+  {
+    "title": "Cargo, modules, and dependency boundaries",
+    "stage": 2,
+    "minutes": 55,
+    "summary": "Read the actual workspace, feature graph, lockfile, and release configuration.",
+    "example": "13_cargo",
+    "number": 13,
+    "slug": "13-cargo",
+    "url": "/course/13-cargo/"
+  },
+  {
+    "title": "Tests, diagnostics, and complementary tools",
+    "stage": 2,
+    "minutes": 60,
+    "summary": "Test contracts and failures, and use compiler output without inventing it.",
+    "example": "14_testing",
+    "number": 14,
+    "slug": "14-testing",
+    "url": "/course/14-testing/"
+  },
+  {
+    "title": "Interior mutability and shared ownership",
+    "stage": 3,
+    "minutes": 50,
+    "summary": "Distinguish reference counts, runtime borrowing, and synchronization.",
+    "example": "15_interior",
+    "number": 15,
+    "slug": "15-interior",
+    "url": "/course/15-interior/"
+  },
+  {
+    "title": "Threads, Send, and Sync",
+    "stage": 3,
+    "minutes": 55,
+    "summary": "Transfer or borrow work safely while keeping completion and failure explicit.",
+    "example": "16_threads",
+    "drill": "send",
+    "number": 16,
+    "slug": "16-threads",
+    "url": "/course/16-threads/"
+  },
+  {
+    "title": "Channels, locks, and shutdown",
+    "stage": 3,
+    "minutes": 55,
+    "summary": "Choose ownership transfer or shared state, and reason about waiting.",
+    "example": "17_sync",
+    "number": 17,
+    "slug": "17-synchronization",
+    "url": "/course/17-synchronization/"
+  },
+  {
+    "title": "Atomics and memory ordering",
+    "stage": 3,
+    "minutes": 60,
+    "summary": "Separate an indivisible counter update from publication of other data.",
+    "example": "18_atomics",
+    "number": 18,
+    "slug": "18-atomics",
+    "url": "/course/18-atomics/"
+  },
+  {
+    "title": "Futures before runtimes",
+    "stage": 3,
+    "minutes": 55,
+    "summary": "Understand polling, wakeups, state machines, and what await does not promise.",
+    "example": "19_futures",
+    "number": 19,
+    "slug": "19-futures",
+    "url": "/course/19-futures/"
+  },
+  {
+    "title": "Tokio tasks, blocking, and cancellation",
+    "stage": 3,
+    "minutes": 70,
+    "summary": "Use a runtime with bounded queues, explicit task results, and deliberate shutdown.",
+    "example": "20_async",
+    "number": 20,
+    "slug": "20-async",
+    "url": "/course/20-async/"
+  },
+  {
+    "title": "Pin and async trait boundaries",
+    "stage": 4,
+    "minutes": 65,
+    "summary": "Understand address-sensitive values and stable alternatives to native async dyn dispatch.",
+    "example": "21_pin",
+    "drill": "async_dyn",
+    "number": 21,
+    "slug": "21-pin",
+    "url": "/course/21-pin/"
+  },
+  {
+    "title": "Stage build: an async ingestion pipeline",
+    "stage": 4,
+    "minutes": 80,
+    "summary": "Keep one owner of the aggregate while producers hand over bounded work.",
+    "example": "22_stage_three",
+    "number": 22,
+    "slug": "22-async-build",
+    "url": "/course/22-async-build/"
+  },
+  {
+    "title": "Unsafe boundaries and soundness",
+    "stage": 4,
+    "minutes": 85,
+    "summary": "Audit one small abstraction with explicit invariants, edge cases, and Miri.",
+    "source": "crates/unsafe-lab/src/lib.rs",
+    "number": 23,
+    "slug": "23-unsafe",
+    "url": "/course/23-unsafe/"
+  },
+  {
+    "title": "Measure performance and resource use",
+    "stage": 4,
+    "minutes": 60,
+    "summary": "Build a reproducible experiment before changing allocation, dispatch, or build profiles.",
+    "example": "23_performance",
+    "number": 24,
+    "slug": "24-performance",
+    "url": "/course/24-performance/"
+  },
+  {
+    "title": "Stable Rust and the horizon",
+    "stage": 4,
+    "minutes": 60,
+    "summary": "Read current initiatives without turning goals, experiments, or compiler limitations into stable promises.",
+    "example": "24_const",
+    "drill": "const_trait",
+    "number": 25,
+    "slug": "25-horizon",
+    "url": "/course/25-horizon/"
+  },
+  {
+    "title": "FFI, serialization, and public contracts",
+    "stage": 4,
+    "minutes": 55,
+    "summary": "Design boundaries where Rust types alone cannot validate the other side.",
+    "source": "examples/25_ffi.rs",
+    "number": 26,
+    "slug": "26-interop",
+    "url": "/course/26-interop/"
+  },
+  {
+    "title": "Capstone: ship Fieldnotes",
+    "stage": 5,
+    "minutes": 150,
+    "summary": "Assemble the tested parser and bounded reader into an installable command-line product.",
+    "source": "crates/audit-cli/src/main.rs",
+    "number": 27,
+    "slug": "27-capstone",
+    "url": "/course/27-capstone/"
+  },
+  {
+    "title": "Release, maintain, and keep learning",
+    "stage": 5,
+    "minutes": 60,
+    "summary": "Review a public API, reproduce a release, and maintain the course's evidence.",
+    "example": "13_cargo",
+    "number": 28,
+    "slug": "28-release",
+    "url": "/course/28-release/"
+  }
+]
