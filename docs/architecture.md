@@ -24,3 +24,9 @@ Stages are immutable reference programs rather than sequentially mutating one co
 Workers Static Assets supports this directory-index SSG directly, with custom domains, asset headers, and real 404 handling. No Worker script is needed. Current official documentation, rather than the older skill-reference Pages decision tree, guided this choice. `wrangler.jsonc` forces trailing-slash HTML routes, serves a proper 404 page, disables workers.dev previews, and binds only rust.robertdevore.com. All production metadata uses that hostname.
 
 Deploy from the documented local CLI with existing OAuth, or configure the optional GitHub workflow's scoped Cloudflare secrets. Neither secrets nor a local credential file are committed. No unrelated DNS or Worker changes are required. Cloudflare manages the DNS/certificate through the Worker custom-domain flow.
+
+## SiteKit and typography
+
+The supported Kujo SiteKit 1.0.0 distribution is vendored unchanged in `assets/sitekit/` from kujolang/site-kit commit c0d199e06bc926e29de87b7cd983ee3d54db9cda. The manifest records file hashes; SiteKit and Departure Mono licenses travel with the bundle. Its reset, tokens, base styles, and button components are loaded before the course theme. Optional SiteKit JavaScript is not loaded because the course already owns its search and navigation behavior.
+
+Departure Mono is self-hosted and preloaded, and is the font for prose, headings, controls, and code. Theme tokens retain the paper/rust palette. Scrollbars use matching light and dark track/thumb colors, with standard and WebKit rules and a forced-colors fallback.
