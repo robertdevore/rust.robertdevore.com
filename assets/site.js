@@ -11,7 +11,7 @@
   const menu=document.querySelector('.menu-toggle');const sidebar=document.querySelector('#course-sidebar');
   if(!sidebar)menu?.remove();
   menu?.addEventListener('click',()=>{const opened=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(opened));sidebar?.classList.toggle('is-open',opened);});
-  document.querySelectorAll('.prose pre').forEach(pre=>{const button=document.createElement('button');button.className='copy';button.type='button';button.textContent='Copy';button.setAttribute('aria-label','Copy code');pre.append(button);button.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(pre.querySelector('code').textContent);button.textContent='Copied';}catch{button.textContent='Select code to copy';}setTimeout(()=>button.textContent='Copy',1800);});});
+  document.querySelectorAll('.prose pre,.workshop pre').forEach(pre=>{const button=document.createElement('button');button.className='copy';button.type='button';button.textContent='Copy';button.setAttribute('aria-label','Copy code');(pre.closest('.workshop')?.querySelector('figcaption')||pre).append(button);button.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(pre.querySelector('code').textContent);button.textContent='Copied';}catch{button.textContent='Select code to copy';}setTimeout(()=>button.textContent='Copy',1800);});});
   const dialog=document.querySelector('#search-dialog'),input=document.querySelector('#search-input'),results=document.querySelector('#search-results'),count=document.querySelector('#search-count');let index;let sequence=0;
   const open=()=>{dialog.showModal();input.focus();};
   document.querySelector('.search-open').addEventListener('click',open);
