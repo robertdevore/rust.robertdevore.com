@@ -44,3 +44,5 @@ Internal structured review, 2026-09-06. No named maintainer participated or endo
 ## Scope of assurance
 
 This is a substantive introductory-to-practical course, not an exhaustive Rust reference or independent external maintainer certification. Unsafe aliasing models and evolving features retain caveats. FFI demonstrates a Rust-defined C ABI only. The timing example makes no benchmark claim. Automated accessibility checks supplement visual/keyboard inspection and do not certify complete accessibility conformance.
+
+Browser follow-up: axe found sidebar number opacity and the table-of-contents note below AA contrast. Removed the reduced opacity and darkened the note. A mobile overflow check fired during route transition; isolated inspection measured viewport/document/body at 390 px, with only deliberately scrollable code content extending inside its container. The browser contract now waits for layout to settle while still failing sustained overflow.
