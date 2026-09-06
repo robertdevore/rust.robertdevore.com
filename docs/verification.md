@@ -27,7 +27,7 @@ An initial axe failure for sidebar/TOC contrast was fixed and CI passed afterwar
 
 The full browser suite passes in CI against the built application. Running it against the public hostname exposed Cloudflare Zaraz scripts inherited from the parent zone. Their third-party tracking requests violate the application’s intentional `connect-src` policy and cause console errors. Production HTTP checks above pass, but the public browser console gate is not yet satisfied.
 
-The narrow remediation is a Cloudflare Configuration Rule matching only `http.host eq "rust.robertdevore.com"`, with `disable_zaraz: true` and `disable_rum: true`. No other hostname or security setting should change. The connected API rejected creation with authentication error 10000; local browser control is unavailable. After the rule is applied, rerun `BASE_URL=https://rust.robertdevore.com BROWSER_CHANNEL=chrome npm run test:browser` and production verification, then replace this pending status with the result. See [Cloudflare settings documentation](https://developers.cloudflare.com/rules/configuration-rules/settings/).
+The narrow remediation is a Cloudflare Configuration Rule matching only `http.host eq "rust.robertdevore.com"`, with `disable_zaraz: true` and `disable_rum: true`. No other hostname or security setting should change. The connected API rejected creation with authentication error 10000; local browser control is unavailable. After the rule is applied, rerun `SITE_URL=https://rust.robertdevore.com BROWSER_CHANNEL=chrome npm run test:browser` and production verification, then replace this pending status with the result. See [Cloudflare settings documentation](https://developers.cloudflare.com/rules/configuration-rules/settings/).
 
 ## Deployment
 
