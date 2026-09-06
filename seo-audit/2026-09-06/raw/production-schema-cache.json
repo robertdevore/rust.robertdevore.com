@@ -1,0 +1,45 @@
+{
+  "matchingGraphs": 32,
+  "assetChecks": [
+    {
+      "path": "/assets/built/site.ff8a2211cd0d.css",
+      "ua": "RustCourseAudit/1.0",
+      "status": 200,
+      "cache": "public, max-age=31536000, immutable"
+    },
+    {
+      "path": "/assets/built/site.ff8a2211cd0d.css",
+      "ua": "Python-urllib/3.10",
+      "status": 403
+    },
+    {
+      "path": "/assets/built/site.cc20d680ec0f.js",
+      "ua": "RustCourseAudit/1.0",
+      "status": 200,
+      "cache": "public, max-age=31536000, immutable"
+    },
+    {
+      "path": "/assets/built/site.cc20d680ec0f.js",
+      "ua": "Python-urllib/3.10",
+      "status": 403
+    }
+  ],
+  "pythonContentChecks": [
+    {
+      "path": "/",
+      "status": 403
+    },
+    {
+      "path": "/course-index.json",
+      "status": 403
+    },
+    {
+      "path": "/lessons/03-ownership.md",
+      "status": 403
+    },
+    {
+      "path": "/llms-full.txt",
+      "status": 403
+    }
+  ]
+}

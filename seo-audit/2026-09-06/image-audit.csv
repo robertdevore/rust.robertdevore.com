@@ -1,0 +1,2 @@
+phase,url,src,alt,width,height,loading
+after,https://rust.robertdevore.com/practice/,/assets/showcase/ownership.svg,"Borrow, then move: a tested Rust example that reads a String through a shared reference before transferring ownership.",1600,900,lazy

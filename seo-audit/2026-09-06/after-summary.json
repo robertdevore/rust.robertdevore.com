@@ -1,0 +1,23 @@
+{
+  "phase": "after",
+  "canonical_pages": 32,
+  "indexable_pages": 32,
+  "missing_titles": 0,
+  "missing_descriptions": 0,
+  "duplicate_titles": 0,
+  "duplicate_descriptions": 0,
+  "missing_canonicals": 0,
+  "h1_problems": 0,
+  "broken_internal_links": 0,
+  "broken_external_destinations": 0,
+  "indeterminate_external_destinations": 0,
+  "orphans": 0,
+  "deeper_than_three": 0,
+  "schema_pages": 32,
+  "schema_parse_errors": 0,
+  "missing_author_metadata": 0,
+  "missing_alt": 0,
+  "missing_dimensions": 0,
+  "external_destinations": 121,
+  "assets_bytes": 937291
+}

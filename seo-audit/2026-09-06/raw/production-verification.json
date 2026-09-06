@@ -1,0 +1,99 @@
+{
+  "verifiedAt": "2026-09-06T20:03:47.624Z",
+  "origin": "https://rust.robertdevore.com",
+  "dns": [
+    "104.21.76.202",
+    "172.67.200.180"
+  ],
+  "certificate": {
+    "authorized": true,
+    "validFrom": "Sep  6 17:15:45 2026 GMT",
+    "validTo": "Dec  5 18:15:40 2026 GMT",
+    "subjectAltName": "DNS:robertdevore.com, DNS:rust.robertdevore.com, DNS:*.rust.robertdevore.com"
+  },
+  "routes": [
+    "/",
+    "/course/",
+    "/practice/",
+    "/about/",
+    "/course/01-start/",
+    "/course/02-values/",
+    "/course/03-ownership/",
+    "/course/04-borrowing/",
+    "/course/05-text/",
+    "/course/06-model/",
+    "/course/07-errors/",
+    "/course/08-first-build/",
+    "/course/09-lifetimes/",
+    "/course/10-traits/",
+    "/course/11-iterators/",
+    "/course/12-reader/",
+    "/course/13-cargo/",
+    "/course/14-testing/",
+    "/course/15-interior/",
+    "/course/16-threads/",
+    "/course/17-synchronization/",
+    "/course/18-atomics/",
+    "/course/19-futures/",
+    "/course/20-async/",
+    "/course/21-pin/",
+    "/course/22-async-build/",
+    "/course/23-unsafe/",
+    "/course/24-performance/",
+    "/course/25-horizon/",
+    "/course/26-interop/",
+    "/course/27-capstone/",
+    "/course/28-release/"
+  ],
+  "assets": [
+    {
+      "path": "/assets/site.css",
+      "type": "text/css",
+      "bytes": 18248
+    },
+    {
+      "path": "/assets/site.js",
+      "type": "text/javascript",
+      "bytes": 4447
+    },
+    {
+      "path": "/assets/social.png",
+      "type": "image/png",
+      "bytes": 330403
+    },
+    {
+      "path": "/assets/favicon.svg",
+      "type": "image/svg+xml",
+      "bytes": 270
+    },
+    {
+      "path": "/search-index.json",
+      "type": "application/json",
+      "bytes": 116024
+    },
+    {
+      "path": "/llms.txt",
+      "type": "text/plain",
+      "bytes": 7045
+    },
+    {
+      "path": "/llms-full.txt",
+      "type": "text/plain",
+      "bytes": 127520
+    },
+    {
+      "path": "/course-index.json",
+      "type": "application/json",
+      "bytes": 15221
+    },
+    {
+      "path": "/assets/showcase/ownership.svg",
+      "type": "image/svg+xml",
+      "bytes": 1808
+    }
+  ],
+  "verifiedMarkdownExports": 28,
+  "httpsRedirect": 301,
+  "trailingSlashRedirect": 301,
+  "notFound": 404
+}
