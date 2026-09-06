@@ -15,3 +15,5 @@
 @media(forced-colors:active){*{scrollbar-color:auto}}
 
 h1,h2,h3,h4,h5,h6,.brand,.top nav,.search-open,.menu-toggle,.text-link,.prose summary{font-family:var(--mono)}
+
+.lesson-source{font-size:12px;color:var(--muted);margin:18px 0 24px}.lesson-source a{color:var(--accent)}

@@ -32,3 +32,11 @@ You can clear your lesson progress here:
 Read the [source repository](https://github.com/robertdevore/rust.robertdevore.com), run its checks, and submit a focused correction with a reproducible example. Include the compiler version when reporting a diagnostic difference. Code and original course text are MIT licensed; cited third-party material remains under its own terms.
 
 Created by [Robert DeVore](https://robertdevore.com). This is an independent educational project, not an official Rust Project publication.
+
+## Author
+
+Robert DeVore maintains this independent course. The [source repository](https://github.com/robertdevore/rust.robertdevore.com) contains the original lesson text, runnable examples, tests, and research ledger. [Report a correction](https://github.com/robertdevore/rust.robertdevore.com/issues) with the lesson URL, toolchain version, and a small reproducer where applicable.
+
+## Portable course text
+
+Each lesson provides a Markdown download containing its explanations, included source, exercises, and compiler diagnostics. The [course index](https://rust.robertdevore.com/course-index.json) links canonical pages to those downloads; the [complete text](https://rust.robertdevore.com/llms-full.txt) is available for offline study or retrieval tools. These are read-only exports of the same course, not a separate source of technical truth.

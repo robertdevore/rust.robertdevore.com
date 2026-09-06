@@ -1,0 +1,8 @@
+{
+  "project": {"name":"Rust Course","tagline":"Understand Rust. Build with confidence.","url":"https://rust.robertdevore.com"},
+  "theme":{"name":"minimal","mode":"light"},
+  "cards":[
+    {"id":"ownership","title":"Borrow, then move","tagline":"Inspect a String through a shared reference, then transfer ownership.","file":"examples/03_ownership.rs","language":"rust","concepts":["borrowing","moves","assertions"],"notes":"The example passes assertions and produces no stdout on Rust 1.98.1.","caption":"Borrow to inspect. Move to transfer ownership. Run this example, then change it and read the compiler.","cta":"Study lesson 03 in the free Rust course.","url":"https://rust.robertdevore.com/course/03-ownership/"},
+    {"id":"rust-course","title":"Practical Rust","tagline":"Understand it. Build with confidence.","file":"examples/03_ownership.rs","language":"rust","variant":"social","label":"28 LESSONS · REAL CODE","font_file":"assets/sitekit/fonts/DepartureMono-Regular.woff2","url":"rust.robertdevore.com","alt":"Practical Rust: Understand it. Build with confidence. 28 lessons and real code.","caption":"A free practical Rust course with 28 lessons, compiler drills, and an installable CLI capstone.","cta":"Start at rust.robertdevore.com."}
+  ]
+}

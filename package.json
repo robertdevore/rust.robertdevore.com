@@ -12,11 +12,15 @@
     "test": "node scripts/test-site.mjs",
     "test:browser": "node scripts/browser.mjs",
     "verify:rust": "bash scripts/verify-rust.sh",
-    "deploy": "npm run build && npm test && wrangler deploy"
+    "deploy": "npm run build && npm test && wrangler deploy",
+    "verify:howl": "node scripts/howl.mjs",
+    "render:howl": "node scripts/howl.mjs --render",
+    "verify:discovery": "node scripts/test-discovery.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.13.0",
     "@playwright/test": "1.63.0",
+    "esbuild": "0.28.1",
     "highlight.js": "11.12.0",
     "markdown-it": "15.0.1",
     "wrangler": "4.129.0"

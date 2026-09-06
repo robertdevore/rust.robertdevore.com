@@ -1,0 +1,17 @@
+{
+  "howlVersion": "1.1.0",
+  "inputs": {
+    "howl.json": "79eaf581191c56e6036549a07c931ec465f2b03e1cceb524ca99c89f67071a98",
+    "examples/03_ownership.rs": "bd312db37300cb0859a0fa7f1e8d71e671f607d5dd35f5419e45c1f733829a25",
+    "assets/sitekit/fonts/DepartureMono-Regular.woff2": "5b4fed1daa90708aa9c6ee1190abca9dc22164a1c1def0020386e46b61038cfb"
+  },
+  "outputs": {
+    "showcase/index.html": "f6eaed0915e73babb7b8585b1f59240af0d9a7247ec1a4c2258ba397f29f519b",
+    "showcase/ownership.html": "b715948b9829ab244dddc25e2b4ecdc4e3c253592ea6fa04751afb29fce79d59",
+    "showcase/ownership.md": "6cdc16e631d642bb058703c5f8e281dc611eea869147427a57b26ee67130f80a",
+    "showcase/ownership.svg": "b4d1bd563781c4e5a56d25c578477973922a716c6dfc7dfb0609666e57577270",
+    "showcase/rust-course.html": "d6588f8f6253f39690e3ef9311d35ec9a0e208db6cf6a99dd92b6bd3ac3f1f5f",
+    "showcase/rust-course.md": "567af2215e06abd2b7f97338aad07587c99fa4d5926dece4975eaefb7c068b88",
+    "showcase/rust-course.svg": "39c86fd2da303800d37bf35c0835905233af0fb1f106cf4c6b6fb38f5009dd49"
+  }
+}

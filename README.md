@@ -59,3 +59,20 @@ node scripts/verify-production.mjs
 `wrangler.jsonc` configures Workers Static Assets and the sole custom domain. Initial deployment is authorized to attach that domain; do not overwrite an existing conflicting record without inspecting ownership. Local deployment uses Wrangler OAuth. Optional manual GitHub deployment requires repository secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`; never put credentials in source. The regular CI runs verification on pushes and PRs independently of deployment credentials.
 
 MIT licensed original code and course prose. Independent project by Robert DeVore; no Rust Project or named-maintainer endorsement is claimed.
+
+## Discovery and reproducible showcase assets
+
+The generator emits factual Schema.org entities and breadcrumbs, source-complete Markdown at `/lessons/<slug>.md`, a versioned `/course-index.json` with content hashes, and `/llms-full.txt`. Canonical HTML remains authoritative. These exports support offline readers and retrieval tools; they are not special ranking requirements and do not expose an execution API.
+
+```sh
+npm run verify:discovery
+npm run verify:howl
+# Install Howl 1.1.0 and Kujo separately, then regenerate when source changes:
+HOWL_BIN=howl npm run render:howl
+BROWSER_CHANNEL=chrome node scripts/social.mjs
+npm run build
+```
+
+`howl.json` references the actual Rust example. `showcase/` contains reviewed deterministic SVG, Markdown, HTML, and a local gallery; the build publishes selected downloadable cards only. Howl does not compile Rust. Rust checks remain in `verify:rust`. CI detects source/artifact drift without requiring Kujo for ordinary website builds. CSS/JS are minified and content-hashed for immutable caching; the vendored SiteKit source remains unchanged.
+
+The dated SEO audit in `seo-audit/2026-09-06/` includes the sealed baseline, production receipts, before/after data, and a future measurement plan. No ranking or AI-citation improvement is claimed without platform data.

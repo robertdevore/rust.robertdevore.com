@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<style>.eyebrow{font-family:monospace;font-size:26px;fill:#2563eb;letter-spacing:6px}.title{font-family:sans-serif;font-size:66px;font-weight:700;fill:#111}.tag{font-family:sans-serif;font-size:30px;fill:#666}.code{font-family:monospace;font-size:26px;fill:#e6e6e6}.concepts{font-family:sans-serif;font-size:26px;fill:#666}.cta{font-family:sans-serif;font-size:26px;font-weight:600;fill:#111}</style>
+<rect width="1600" height="900" fill="#ffffff"/>
+<rect x="0" y="0" width="1600" height="10" fill="#2563eb"/>
+<text x="80" y="120" class="eyebrow">RUST COURSE</text>
+<text x="80" y="210" class="title">Borrow, then move</text>
+<text x="80" y="296" class="tag">Inspect a String through a shared reference, then transfer ownership.</text>
+<rect x="80" y="360" width="1440" height="440" rx="16" fill="#0f1115"/>
+<text x="116" y="416" class="code">fn label(text: &amp;str) -&gt; usize {</text>
+<text x="116" y="454" class="code">    text.len()</text>
+<text x="116" y="492" class="code">}</text>
+<text x="116" y="530" class="code">fn main() {</text>
+<text x="116" y="568" class="code">    let original = String::from(&quot;WARN retry&quot;);</text>
+<text x="116" y="606" class="code">    let bytes = label(&amp;original);</text>
+<text x="116" y="644" class="code">    let stored = original;</text>
+<text x="116" y="682" class="code">    assert_eq!(bytes, 10);</text>
+<text x="116" y="720" class="code">    assert_eq!(stored, &quot;WARN retry&quot;);</text>
+<text x="116" y="758" class="code">}</text>
+<text x="116" y="796" class="code">… (1 more lines)</text>
+<text x="80" y="858" class="concepts">borrowing, moves, assertions</text>
+<text x="80" y="895" class="cta">Study lesson 03 in the free Rust course.</text>
+</svg>

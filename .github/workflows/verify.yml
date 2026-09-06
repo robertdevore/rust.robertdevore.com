@@ -19,7 +19,7 @@ jobs:
       - run: npm ci
       - run: rustup toolchain install 1.98.1 --profile minimal --component clippy --component rustfmt
       - run: npm run verify:rust
-      - run: npm run build && npm test
+      - run: npm run build && npm test && npm run verify:discovery && npm run verify:howl
       - run: npx playwright install --with-deps chromium
       - name: Browser contracts
         run: |
