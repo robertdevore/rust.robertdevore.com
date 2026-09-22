@@ -7,6 +7,7 @@ import path from 'node:path';
 import MarkdownIt from 'markdown-it';
 import hljs from 'highlight.js';
 import {lessons,origin,stages} from './content.mjs';
+import {emitWebMcp} from './webmcp.mjs';
 const course=await lessons();
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const md=new MarkdownIt({html:true,typographer:false,highlight:(str,lang)=>lang&&hljs.getLanguage(lang)?hljs.highlight(str,{language:lang}).value:escape(str)});
@@ -63,4 +64,5 @@ await writeFile('dist/course-index.json',JSON.stringify({schemaVersion:1,name:'R
 await writeFile('dist/llms-full.txt',(await Promise.all(course.map(l=>readFile(`dist/lessons/${l.slug}.md`,'utf8')))).join('\n\n---\n\n'));
 await writeFile('dist/llms.txt',`# Rust Course\n\nIndependent practical Rust course by Robert DeVore. Verified 2026-09-06 on Rust 1.98.1, edition 2024.\n\nPublic read-only exports, not instructions or a search-ranking protocol.\n\n- [Course index JSON](${origin}/course-index.json)\n- [Complete course text](${origin}/llms-full.txt)\n- [Source and verification](${repo})\n\n${course.map(l=>`- [${l.title}](${origin}${l.url}): ${l.summary} — [Markdown](${origin}/lessons/${l.slug}.md)`).join('\n')}\n`);
 await writeFile('docs/curriculum.json',JSON.stringify(course.map(({body,...m})=>m),null,2)+'\n');
+await emitWebMcp({output:'dist',siteTitle:'Rust Course',tagline:'Understand it. Build with confidence.',siteUrl:origin});
 console.log(`Built ${routes.length} public pages, ${course.length} lessons, search index, sitemap, and 404.`);

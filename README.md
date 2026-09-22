@@ -62,7 +62,7 @@ MIT licensed original code and course prose. Independent project by Robert DeVor
 
 ## Discovery and reproducible showcase assets
 
-The generator emits factual Schema.org entities and breadcrumbs, source-complete Markdown at `/lessons/<slug>.md`, a versioned `/course-index.json` with content hashes, and `/llms-full.txt`. Canonical HTML remains authoritative. These exports support offline readers and retrieval tools; they are not special ranking requirements and do not expose an execution API.
+The generator emits factual Schema.org entities and breadcrumbs, source-complete Markdown at `/lessons/<slug>.md`, a versioned `/course-index.json` with content hashes, `/llms-full.txt`, and the read-only Kujo SSG WebMCP v1 public index and browser adapter. Canonical HTML remains authoritative. These exports support offline readers and retrieval tools; they are not special ranking requirements and expose no mutation or server execution API.
 
 ```sh
 npm run verify:discovery
