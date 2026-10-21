@@ -22,7 +22,7 @@
     "@playwright/test": "1.63.0",
     "esbuild": "0.28.1",
     "highlight.js": "11.12.0",
-    "markdown-it": "15.0.1",
+    "markdown-it": "15.0.3",
     "wrangler": "4.151.2"
   }
 }
