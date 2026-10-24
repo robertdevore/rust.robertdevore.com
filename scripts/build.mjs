@@ -66,3 +66,7 @@ await writeFile('dist/llms.txt',`# Rust Course\n\nIndependent practical Rust cou
 await writeFile('docs/curriculum.json',JSON.stringify(course.map(({body,...m})=>m),null,2)+'\n');
 await emitWebMcp({output:'dist',siteTitle:'Rust Course',tagline:'Understand it. Build with confidence.',siteUrl:origin});
 console.log(`Built ${routes.length} public pages, ${course.length} lessons, search index, sitemap, and 404.`);
+
+// Install and validate the reviewed security checkpoint after generation.
+const { execFileSync: runCheckpoint } = await import("node:child_process");
+runCheckpoint("python3", ["scripts/security-checkpoint.py"], { stdio: "inherit" });
